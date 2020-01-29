@@ -78,6 +78,20 @@
 @import 'pages/services/service-single';
 @import 'pages/services/service-summary';
 
+ul.intro-social-buttons > li {
+    display: inline;
+    margin-left: 20px;
+    padding: 0;
+}
+
+ul.intro-social-buttons > li:last-child {
+    margin-bottom: 0;
+}
+
+ul.list-inline {
+    display: inline;
+}
+
 // Display breakpoints for DEV
 // body:after {
 //   color: #000000;

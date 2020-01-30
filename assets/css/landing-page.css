@@ -58,13 +58,23 @@ html {
     padding: 0 15px;
   }
 
-.brand-title {
+.brand-title-desktop {
     font-size:70px;
     color: #000000;
 }
 
-.brand-slogan {
+.brand-slogan-desktop {
     font-size:30px;
+    color: #808080;
+}
+
+.brand-title-mobile {
+    font-size:50px;
+    color: #000000;
+}
+
+.brand-slogan-mobile {
+    font-size:18px;
     color: #808080;
 }
 

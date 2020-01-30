@@ -3,11 +3,29 @@ title: Look and Paws | Dogwear Shipped Worldwide
 layout: default
 ---
 <div class="background-image-desktop d-none d-md-block">
-  {% include landing-page-content.html %}
+  <main role="main" class="container">
+    <div class="row">
+      <div class="col-md-7 col-10">
+        <h1 class="brand-title-desktop mt-5">{{ site.title }}</h1>
+        <p class="brand-slogan-desktop">{{ site.slogan }}</p>
+        <p class="coming-soon">Coming soon...</p>
+        <a href="{{ site.instagramUrl }}" class="btn btn-light btn-sm"><i class="fa fa-{{ site.instagram }} fa-fw"></i> <span class="network-name">{{ site.instagram }}</span></a>
+      </div>  
+    </div>
+  </main>
 </div>
 
 <div class="background-image-mobile d-block d-md-none">
-  {% include landing-page-content.html %}
+  <main role="main" class="container">
+    <div class="row">
+      <div class="col-md-7 col-10">
+        <h1 class="brand-title-mobile mt-5">{{ site.title }}</h1>
+        <p class="brand-slogan-mobile">{{ site.slogan }}</p>
+        <p class="coming-soon">Coming soon...</p>
+        <a href="{{ site.instagramUrl }}" class="btn btn-light btn-sm"><i class="fa fa-{{ site.instagram }} fa-fw"></i> <span class="network-name">{{ site.instagram }}</span></a>
+      </div>  
+    </div>
+  </main>
 </div>
 
 {% include footer.html %}

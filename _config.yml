@@ -10,8 +10,6 @@ slogan: For people with sass pets and bouji floofs
 socialMediaButtons:
   - socialMediaCompanyName: instagram
     url: https://instagram.com/lookandpawsofficial
-  - socialMediaCompanyName: facebook
-    url: https://www.facebook.com/lookandpaws/
 
 sass:
   style: compact # possible values: nested expanded compact compressed

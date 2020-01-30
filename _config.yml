@@ -3,16 +3,8 @@ permalink: pretty
 title: Look and Paws
 slogan: For people with sass pets and bouji floofs
 
-# --------------------------------------------- #
-#   Configure Social Media Links On Home Page   #
-# --------------------------------------------- #
-
-socialMediaButtons:
-  - socialMediaCompanyName: instagram
-    url: https://instagram.com/lookandpawsofficial
-
-sass:
-  style: compact # possible values: nested expanded compact compressed
+instagram: instagram
+instagramUrl: https://instagram.com/lookandpawsofficial
 
 google_analytics_id: null
 

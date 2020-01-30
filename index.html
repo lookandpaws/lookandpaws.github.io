@@ -1,33 +1,14 @@
 ---
 title: Look and Paws | Dogwear Shipped Worldwide
 layout: default
-bodyClass: page-home
 ---
-
-<div class="intro pb-4">
-  <div class="container">
-    <h1>{{site.title}}</h1>
-    <p>{{site.slogan}}</p>
-    <div class="row">
-      <div class="col-4">
-        <div class="row">
-          {% for socialMediaButton in site.socialMediaButtons %}
-          <div class="col-12">
-            <a href="{{ socialMediaButton.url }}" class="btn btn-default btn-sm"><i class="fa fa-{{ socialMediaButton.socialMediaCompanyName }} fa-fw"></i> <span class="network-name">{{ socialMediaButton.socialMediaCompanyName }}</span></a>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-      
-<!-- <ul class="list-inline intro-social-buttons">
-  {% for socialMediaButton in site.socialMediaButtons %}
-  <li>
-    <a href="{{ socialMediaButton.url }}" class="btn btn-default btn-sm"><i class="fa fa-{{ socialMediaButton.socialMediaCompanyName }} fa-fw"></i> <span class="network-name">{{ socialMediaButton.socialMediaCompanyName }}</span></a>
-  </li>
-  {% endfor %}
-</ul> -->
-    </div>
-  </div>
+<div class="background-image-desktop d-none d-md-block">
+  {% include landing-page-content.html %}
 </div>
 
+<div class="background-image-mobile d-block d-md-none">
+  {% include landing-page-content.html %}
+</div>
+
+{% include footer.html %}
 

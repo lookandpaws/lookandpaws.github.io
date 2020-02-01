@@ -23,7 +23,7 @@ html {
 
   .background-image-desktop {
     /* The image used */
-    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
+    background-image: url("/images/Look_and_Paws_Landing_Page.jpg");
   
     /* Half height */
     height: 50%;
@@ -36,7 +36,7 @@ html {
 
   .background-image-mobile {
     /* The image used */
-    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
+    background-image: url("/images/Look_and_Paws_Landing_Page.jpg");
   
     /* Half height */
     height: 50%;
@@ -65,7 +65,7 @@ html {
 
 .brand-slogan-desktop {
     font-size:30px;
-    color: #808080;
+    color: #ffffff;
 }
 
 .brand-title-mobile {
@@ -75,7 +75,7 @@ html {
 
 .brand-slogan-mobile {
     font-size:18px;
-    color: #808080;
+    color: #ffffff;
 }
 
 .coming-soon {

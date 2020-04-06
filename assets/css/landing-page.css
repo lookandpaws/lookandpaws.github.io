@@ -80,7 +80,7 @@ html {
 
 .coming-soon {
     font-size:15px;
-    color: #ffffff;
+    color: #F81894;
 }
 
 .shipping {
@@ -89,4 +89,13 @@ html {
 
 .copyright {
     color: #07d8ff;
+}
+
+.countdownTimer {
+  font-size: 30px;
+  border: 1px solid #F81894;
+  background-color: #F81894;
+  border-radius: 25px;
+  padding: 12px;
+  width: 254px;
 }

@@ -47,6 +47,18 @@ html {
     background-size: cover;
   }
 
+  .lookAndPawsLogoLongDesktop {
+    height: 120px;
+    width: 470px;
+    padding-bottom: 20px;
+  }
+
+  .lookAndPawsLogoLongMobile {
+    height: 70px;
+    width: 250px;
+    padding-bottom: 20px;
+  }
+
   .container {
     width: auto;
     padding-left: 15px;

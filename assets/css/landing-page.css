@@ -54,8 +54,8 @@ html {
   }
 
   .lookAndPawsLogoLongMobile {
-    height: 70px;
-    width: 250px;
+    height: 85px;
+    width: 280px;
     padding-bottom: 20px;
   }
 
@@ -114,6 +114,6 @@ html {
 
 .countdownTimerMobile {
   margin-top:30px;
-  font-size: 10px;
-  width: 170px;
+  font-size: 12px;
+  width: 200px;
 }

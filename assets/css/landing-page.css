@@ -108,12 +108,12 @@ html {
 
 .countdownTimerDesktop {
   margin-top:40px;
-  font-size: 30px;
-  width: 470px;
+  font-size: 20px;
+  width: 370px;
 }
 
 .countdownTimerMobile {
   margin-top:30px;
-  font-size: 15px;
-  width: 254px;
+  font-size: 10px;
+  width: 170px;
 }

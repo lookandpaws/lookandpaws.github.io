@@ -5,6 +5,10 @@ slogan: Sassy petwear for bouji floofs
 
 instagram: instagram
 instagramUrl: https://instagram.com/lookandpawsofficial
+twitter: twitter
+twitterUrl: https://twitter.com/lookandpaws
+linktree: linktree
+linktreeUrl: https://linktr.ee/lookandpaws
 
 plugins:
   - jekyll-environment-variables

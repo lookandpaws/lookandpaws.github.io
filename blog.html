@@ -16,11 +16,11 @@ layout: default
         <div class="card mb-4">
           <img class="card-img-top" src="{{ site.blogTitleOne }}" alt="{{ site.blogTitleOne }} by {{ site.blogAuthoredByOne }}">
           <div class="card-body">
-            <h2 class="card-title">{{ site.blogTitleOne }}</h2>
-            <p class="card-text">{{ site.blogDescriptionOne }}</p>
-            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+            <h2 class="card-title blogHomeBlogPostTitle">{{ site.blogTitleOne }}</h2>
+            <p class="card-text blogHomeBlogPostDescription">{{ site.blogDescriptionOne }}</p>
+            <a href="{{ site.blogUrlOne }}" class="btn btn-primary blogHomeBlogPostReadMoreButton">Read More &rarr;</a>
           </div>
-          <div class="card-footer text-muted">
+          <div class="card-footer text-muted blogHomeBlogPostWhenAndWho">
             Posted on <b>{{ site.blogPostedDateOne }}</b> by <i>{{ site.blogAuthoredByOne }}</i>
           </div>
         </div>

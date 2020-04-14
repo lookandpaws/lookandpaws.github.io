@@ -158,3 +158,20 @@ font-family: 'Baloo Bhai', cursive;
 .blogHomeTitle {
   font-family: 'Muli', sans-serif;
 }
+
+.blogHomeBlogPostTitle {
+  font-family: 'Muli', sans-serif;
+}
+
+.blogHomeBlogPostDescription {
+  font-family: 'Muli', sans-serif;
+}
+
+.blogHomeBlogPostWhenAndWho {
+  font-family: 'Muli', sans-serif;
+}
+
+.blogHomeBlogPostReadMoreButton {
+  font-family: 'Muli', sans-serif;
+  background-color: #FFAAEA;
+}

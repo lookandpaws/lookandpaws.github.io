@@ -11,6 +11,14 @@ body {
   margin-bottom: 60px; /* Margin bottom by footer height */
 }
 
+.navbarLink {
+color: #000000 !important;
+font-family: 'Baloo Bhai', cursive;
+border:1px solid #f5f5f5;
+border-radius: 5px;
+padding: 10px !important;
+}
+
 .navbarStyle {
   background-color: #fac0ec;
   /* background-color: #f5f5f5; */

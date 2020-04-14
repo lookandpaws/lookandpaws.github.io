@@ -5,11 +5,16 @@ layout: default
 <div class="background-image-desktop d-none d-md-block">
   <main role="main" class="container">
     <div class="row">
-      <div class="col-md-7 col-10">
-        <img src="images/Look_and_Paws_Logo_Long.png" alt="Look and Paws" class="lookAndPawsLogoLongDesktop">
-        <p class="brand-slogan-desktop">{{ site.slogan }}</p>
-        <p id="countdownTimerDesktop" class="countdownTimerMain countdownTimerDesktop"></p>
-        {% include social-media-buttons.html %}
+      <div class="col-md-6 col-10" style="background-color: red;">
+        <img src="images/Look_and_Paws_Logo_Long.png" alt="Look and Paws" class="lookAndPawsLogoLongDesktop centerAnImage">
+        <p class="brand-slogan-desktop mx-auto text-center">{{ site.slogan }}</p>
+        <p id="countdownTimerDesktop" class="countdownTimerMain countdownTimerDesktop mx-auto"></p>
+        <div class="col-md-6 mx-auto text-center" style="background-color: yellow;">
+          {% include social-media-buttons.html %}
+        </div>
+        <div class="col-md-6 mx-auto text-center blogButtonContainer" style="background-color: green;">
+          <a href="{{ site.blogHomePageUrl }}" class="btn btn-light btn-lg">Read Our Blog</a>
+        </div>
       </div>  
     </div>
   </main>
@@ -18,11 +23,16 @@ layout: default
 <div class="background-image-mobile d-block d-md-none">
   <main role="main" class="container">
     <div class="row">
-      <div class="col-md-7 col-10">
-        <img src="images/Look_and_Paws_Logo_Long.png" alt="Look and Paws" class="lookAndPawsLogoLongMobile">
-        <p class="brand-slogan-mobile">{{ site.slogan }}</p>
-        <p id="countdownTimerMobile" class="countdownTimerMain countdownTimerMobile"></p>
-        {% include social-media-buttons.html %}
+      <div class="col-md-6 col-10" style="background-color: red;">
+        <img src="images/Look_and_Paws_Logo_Long.png" alt="Look and Paws" class="lookAndPawsLogoLongMobile centerAnImage">
+        <p class="brand-slogan-mobile mx-auto text-center">{{ site.slogan }}</p>
+        <p id="countdownTimerMobile" class="countdownTimerMain countdownTimerMobile mx-auto"></p>
+        <div class="col-md-6 mx-auto text-center" style="background-color: yellow;">
+          {% include social-media-buttons.html %}
+        </div>
+        <div class="col-md-6 mx-auto text-center blogButtonContainer" style="background-color: green;">
+          <a href="{{ site.blogHomePageUrl }}" class="btn btn-light btn-lg">Read Our Blog</a>
+        </div>
       </div>  
     </div>
   </main>

@@ -9,9 +9,7 @@ layout: default
         <img src="images/Look_and_Paws_Logo_Long.png" alt="Look and Paws" class="lookAndPawsLogoLongDesktop">
         <p class="brand-slogan-desktop">{{ site.slogan }}</p>
         <p id="countdownTimerDesktop" class="countdownTimerMain countdownTimerDesktop"></p>
-        <a href="{{ site.instagramUrl }}" class="btn btn-light btn-sm socialMediaButton"><i class="fa fa-instagram fa-fw"></i> <span class="network-name">{{ site.instagram }}</span></a>
-        <a href="{{ site.twitterUrl }}" class="btn btn-light btn-sm socialMediaButton"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">{{ site.twitter }}</span></a>
-        <a href="{{ site.linktreeUrl }}" class="btn btn-light btn-sm socialMediaButton"><i class="fa fa-tree fa-fw"></i> <span class="network-name">{{ site.linktree }}</span></a>
+        {% include social-media-buttons.html %}
       </div>  
     </div>
   </main>
@@ -24,9 +22,7 @@ layout: default
         <img src="images/Look_and_Paws_Logo_Long.png" alt="Look and Paws" class="lookAndPawsLogoLongMobile">
         <p class="brand-slogan-mobile">{{ site.slogan }}</p>
         <p id="countdownTimerMobile" class="countdownTimerMain countdownTimerMobile"></p>
-        <a href="{{ site.instagramUrl }}" class="btn btn-light btn-sm socialMediaButton"><i class="fa fa-instagram fa-fw"></i> <span class="network-name">{{ site.instagram }}</span></a>
-        <a href="{{ site.twitterUrl }}" class="btn btn-light btn-sm socialMediaButton"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">{{ site.twitter }}</span></a>
-        <a href="{{ site.linktreeUrl }}" class="btn btn-light btn-sm socialMediaButton"><i class="fa fa-tree fa-fw"></i> <span class="network-name">{{ site.linktree }}</span></a>
+        {% include social-media-buttons.html %}
       </div>  
     </div>
   </main>

@@ -58,11 +58,22 @@ body {
   padding-bottom: 20px;
 }
 
+.lookAndPawsLogoLongBlogHome {
+  height: 70px;
+}
+
 .centerAnImage {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 90%;
+}
+
+.centerAnImageBlogHome {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 .container {
@@ -142,4 +153,8 @@ font-family: 'Baloo Bhai', cursive;
 
 .blogButton {
   font-family: 'Baloo Bhai', cursive;
+}
+
+.blogHomeTitle {
+  font-family: 'Muli', sans-serif;
 }

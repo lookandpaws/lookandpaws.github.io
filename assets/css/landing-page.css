@@ -173,7 +173,11 @@ font-family: 'Baloo Bhai', cursive;
 
 .blogHomeBlogPostReadMoreButton {
   font-family: 'Muli', sans-serif;
-  background-color: #FFAAEA;
-  border-color: #FFAAEA;
-  color: #000000;
 }
+
+.btn-primary{color:#000000;background-color:#FFAAEA;border-color:#FFAAEA}
+.btn-primary:hover{color:#fff;background-color:#f7c8ec;border-color:#f7c8ec}
+.btn-primary:focus,.btn-primary.focus{box-shadow:0 0 0 .2rem rgba(0,90,90,0.5)}
+.btn-primary.disabled,.btn-primary:disabled{color:#fff;background-color:#999999;border-color:#999999}
+.btn-primary:not(:disabled):not(.disabled):active,.btn-primary:not(:disabled):not(.disabled).active,.show>.btn-primary.dropdown-toggle{color:#fff;background-color:#FFAAEA;border-color:#000}
+.btn-primary:not(:disabled):not(.disabled):active:focus,.btn-primary:not(:disabled):not(.disabled).active:focus,.show>.btn-primary.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(0,90,90,0.5)}

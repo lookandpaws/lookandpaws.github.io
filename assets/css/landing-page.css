@@ -199,3 +199,9 @@ font-family: 'Baloo Bhai', cursive;
 .btn-primary.disabled,.btn-primary:disabled{color:#fff;background-color:#999999;border-color:#999999}
 .btn-primary:not(:disabled):not(.disabled):active,.btn-primary:not(:disabled):not(.disabled).active,.show>.btn-primary.dropdown-toggle{color:#fff;background-color:#fac0ec;border-color:#000}
 .btn-primary:not(:disabled):not(.disabled):active:focus,.btn-primary:not(:disabled):not(.disabled).active:focus,.show>.btn-primary.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(0,90,90,0.5)}
+
+.hrTagStyle {
+  border-width: 2px; 
+  width:200px; 
+  background-color:#fac0ec;
+}

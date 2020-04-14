@@ -174,4 +174,6 @@ font-family: 'Baloo Bhai', cursive;
 .blogHomeBlogPostReadMoreButton {
   font-family: 'Muli', sans-serif;
   background-color: #FFAAEA;
+  border-color: #FFAAEA;
+  color: #000000;
 }

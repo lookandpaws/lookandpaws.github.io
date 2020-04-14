@@ -9,12 +9,8 @@ layout: default
         <img src="images/Look_and_Paws_Logo_Long.png" alt="Look and Paws" class="lookAndPawsLogoLongDesktop centerAnImage">
         <p class="brand-slogan-desktop mx-auto text-center">{{ site.slogan }}</p>
         <p id="countdownTimerDesktop" class="countdownTimerMain countdownTimerDesktop mx-auto"></p>
-        <div class="col-md-6 mx-auto text-center" style="background-color: yellow;">
-          {% include social-media-buttons.html %}
-        </div>
-        <div class="col-md-6 mx-auto text-center blogButtonContainer" style="background-color: green;">
-          <a href="{{ site.blogHomePageUrl }}" class="btn btn-light btn-lg">Read Our Blog</a>
-        </div>
+        {% include social-media-buttons.html %}
+        {% include blog-button.html %}
       </div>  
     </div>
   </main>
@@ -27,12 +23,8 @@ layout: default
         <img src="images/Look_and_Paws_Logo_Long.png" alt="Look and Paws" class="lookAndPawsLogoLongMobile centerAnImage">
         <p class="brand-slogan-mobile mx-auto text-center">{{ site.slogan }}</p>
         <p id="countdownTimerMobile" class="countdownTimerMain countdownTimerMobile mx-auto"></p>
-        <div class="col-md-6 mx-auto text-center" style="background-color: yellow;">
-          {% include social-media-buttons.html %}
-        </div>
-        <div class="col-md-6 mx-auto text-center blogButtonContainer" style="background-color: green;">
-          <a href="{{ site.blogHomePageUrl }}" class="btn btn-light btn-lg">Read Our Blog</a>
-        </div>
+        {% include social-media-buttons.html %}
+        {% include blog-button.html %}
       </div>  
     </div>
   </main>

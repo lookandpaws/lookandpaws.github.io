@@ -1,11 +1,12 @@
-<div class="card mb-4">
-  <img class="card-img-top" src="{{ site.blogLandscapeImageOne }}" alt="{{ site.blogTitleOne }} by {{ site.blogAuthoredByOne }}">
-  <div class="card-body">
-    <h2 class="card-title blogHomeBlogPostTitle">{{ site.blogTitleOne }}</h2>
-    <p class="card-text blogHomeBlogPostDescription">{{ site.blogDescriptionOne }}</p>
-    <a href="{{ site.blogUrlOne }}" class="btn btn-primary blogHomeBlogPostReadMoreButton">Read More &rarr;</a>
+<a href="{{ site.blogUrlOne }}">
+  <div class="card mb-4">
+    <img class="card-img-top" src="{{ site.blogLandscapeImageOne }}" alt="{{ site.blogTitleOne }} by {{ site.blogAuthoredByOne }}">
+    <div class="card-body">
+      <h2 class="card-title blogHomeBlogPostTitle">{{ site.blogTitleOne }}</h2>
+      <p class="card-text blogHomeBlogPostDescription">{{ site.blogDescriptionOne }}</p>
+    </div>
+    <div class="card-footer text-muted blogHomeBlogPostWhenAndWho">
+      Posted on <b>{{ site.blogPostedDateOne }}</b> by <i>{{ site.blogAuthoredByOne }}</i>
+    </div>
   </div>
-  <div class="card-footer text-muted blogHomeBlogPostWhenAndWho">
-    Posted on <b>{{ site.blogPostedDateOne }}</b> by <i>{{ site.blogAuthoredByOne }}</i>
-  </div>
-</div>
+</a>

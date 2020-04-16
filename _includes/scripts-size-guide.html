@@ -1,9 +1,9 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $('[name=title_format]').click(function()  {
-            console.log("Click.....");
-
-            var radioButtonValueClicked = +$(this).val();
+            var radioButtonValueClicked = $(this).val();
+            
+            console.log("Clicked " + radioButtonValueClicked);
 
             $('[name=doc-title]').val('Clicked ' + radioButtonValueClicked);
         });

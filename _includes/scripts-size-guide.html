@@ -9,44 +9,40 @@
 
             var measurementSelectList = document.getElementById("measurementValueSelectList");
             
+            const centimetres = "Cm";
+            const inches = "In";
+
             for (i = 0; i < measurementSelectList.length; i++) 
             { 
                 console.log(i);
 
                 var currentMeasurementValue = measurementSelectList.options[i].value;
                 var currentMeasurementText = measurementSelectList.options[i].text;
-                
-                // currentMeasurementValue.replace("In","");
-                // currentMeasurementText.replace("In","");
-                // currentMeasurementValue.replace("Cm","");
-                // currentMeasurementText.replace("Cm","");
-
-                var strippedCurrentMeasurementValue;
 
                 if(currentMeasurementValue.indexOf("In") !== -1)
                 {
                     console.log("Contains In inside VALUE");
-                    strippedCurrentMeasurementValue = currentMeasurementValue.replace("In","");
+                    currentMeasurementValue = currentMeasurementValue.replace(/In/g,"");
                 }
-                else
+                else if(currentMeasurementValue.indexOf("Cm") !== -1)
                 {
-                    strippedCurrentMeasurementValue = currentMeasurementValue;
+                    console.log("Contains Cm inside VALUE");
+                    currentMeasurementValue = currentMeasurementValue.replace(/Cm/g,"");
                 }
-
-                var strippedCurrentMeasurementText;
 
                 if(currentMeasurementText.indexOf("In") !== -1)
                 {
                     console.log("Contains In inside TEXT");
-                    strippedCurrentMeasurementText = currentMeasurementText.replace("In","");
+                    currentMeasurementText = currentMeasurementText.replace(/In/g,"");
                 }
-                else
+                else if(currentMeasurementText.indexOf("Cm") !== -1)
                 {
-                    strippedCurrentMeasurementText = currentMeasurementText;
+                    console.log("Contains Cm inside TEXT");
+                    currentMeasurementText = currentMeasurementText.replace(/Cm/g,"");
                 }
 
-                var newMeasurementValue = strippedCurrentMeasurementValue + " " + chosenMeasurementValue;
-                var newMeasurementText = strippedCurrentMeasurementText + " " + chosenMeasurementValue;
+                var newMeasurementValue = currentMeasurementValue + " " + chosenMeasurementValue;
+                var newMeasurementText = currentMeasurementText + " " + chosenMeasurementValue;
 
                 measurementSelectList.options[i].value = newMeasurementValue;
                 measurementSelectList.options[i].text = newMeasurementText;

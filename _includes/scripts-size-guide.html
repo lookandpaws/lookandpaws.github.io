@@ -1,5 +1,9 @@
 <script type="text/javascript">
     $(document).ready(function(){
+
+        const centimetres = "Cm";
+        const inches = "In";
+
         $("[name=measurementTypeRadioButton]").click(function()  {
             var chosenMeasurementValue = $(this).val();
             
@@ -8,9 +12,6 @@
             $("#measurementTypeLabel").text(measurementTypeLabel);
 
             var measurementSelectList = document.getElementById("measurementValueSelectList");
-            
-            const centimetres = "Cm";
-            const inches = "In";
 
             for (i = 0; i < measurementSelectList.length; i++) 
             { 
@@ -48,7 +49,42 @@
                 measurementSelectList.options[i].text = newMeasurementText;
             }
 
-
         });
+
+        $('#measurementValueSelectList').change(function() {
+            var currentlySelectedMeasurementValue = $('#measurementValueSelectList option:selected').val();
+
+            console.log("Chosen " + currentlySelectedMeasurementValue);
+
+            var correctProductSize = determineCorrectProductSizeToPurchase(currentlySelectedMeasurementValue);
+        });
+
+        function determineCorrectProductSizeToPurchase(inputMeasurementValue)
+        {
+            if(inputMeasurementValue.indexOf(inches) !== -1)
+            {
+                console.log("Contains In");
+                var strippedInputMeasurementValueInches = inputMeasurementValue.replace(/In/g,"");
+
+                return lookupInchesMeasurement(strippedInputMeasurementValueInches);
+            }
+            else if(inputMeasurementValue.indexOf(centimetres) !== -1)
+            {
+                console.log("Contains Cm");
+                var strippedInputMeasurementValueCentimetres = inputMeasurementValue.replace(/Cm/g,"");
+
+                return lookupCentimetresMeasurement(strippedInputMeasurementValueCentimetres);
+            }
+        }
+
+        function lookupCentimetresMeasurement(inputCentimetreValue)
+        {
+
+        }
+
+        function lookupInchesMeasurement(inputInchesValue)
+        {
+
+        }
     });
 </script>

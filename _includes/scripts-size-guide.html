@@ -16,6 +16,21 @@
                 var currentMeasurementValue = measurementSelectList.options[i].value;
                 var currentMeasurementText = measurementSelectList.options[i].text;
                 
+                currentMeasurementValue.replace("In","");
+                currentMeasurementText.replace("In","");
+                currentMeasurementValue.replace("Cm","");
+                currentMeasurementText.replace("Cm","");
+
+                // if(currentMeasurementValue.includes("In"))
+                // {
+                //     currentMeasurementValue.replace("In","");
+                // }
+
+                // if(currentMeasurementText.includes("In"))
+                // {
+                //     currentMeasurementText.replace("In","");
+                // }
+
                 var newMeasurementValue = currentMeasurementValue + " " + chosenMeasurementValue;
                 var newMeasurementText = currentMeasurementText + " " + chosenMeasurementValue;
 

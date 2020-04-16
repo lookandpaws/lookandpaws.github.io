@@ -19,23 +19,23 @@
                 var currentMeasurementValue = measurementSelectList.options[i].value;
                 var currentMeasurementText = measurementSelectList.options[i].text;
 
-                if(currentMeasurementValue.indexOf("In") !== -1)
+                if(currentMeasurementValue.indexOf(inches) !== -1)
                 {
                     console.log("Contains In inside VALUE");
                     currentMeasurementValue = currentMeasurementValue.replace(/In/g,"");
                 }
-                else if(currentMeasurementValue.indexOf("Cm") !== -1)
+                else if(currentMeasurementValue.indexOf(centimetres) !== -1)
                 {
                     console.log("Contains Cm inside VALUE");
                     currentMeasurementValue = currentMeasurementValue.replace(/Cm/g,"");
                 }
 
-                if(currentMeasurementText.indexOf("In") !== -1)
+                if(currentMeasurementText.indexOf(inches) !== -1)
                 {
                     console.log("Contains In inside TEXT");
                     currentMeasurementText = currentMeasurementText.replace(/In/g,"");
                 }
-                else if(currentMeasurementText.indexOf("Cm") !== -1)
+                else if(currentMeasurementText.indexOf(centimetres) !== -1)
                 {
                     console.log("Contains Cm inside TEXT");
                     currentMeasurementText = currentMeasurementText.replace(/Cm/g,"");

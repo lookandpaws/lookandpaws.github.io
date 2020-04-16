@@ -1,5 +1,8 @@
-/* Sticky footer styles
--------------------------------------------------- */
+@font-face {
+  font-family: Marker-Felt-Regular;
+  src: url(/assets/fonts/Marker-Felt-Regular.ttf);
+}
+
 html {
   height: 100%;
   position: relative;
@@ -168,12 +171,12 @@ font-family: 'Baloo Bhai', cursive;
 }
 
 .blogHomeTitle {
-  font-family: 'Muli', sans-serif;
+  font-family: 'Marker-Felt-Regular', sans-serif;
   font-size: 24px;
 }
 
 .blogHomeBlogPostTitle {
-  font-family: 'Muli', sans-serif;
+  font-family: 'Marker-Felt-Regular', sans-serif;
 }
 
 .blogHomeBlogPostDescription {
@@ -189,8 +192,13 @@ font-family: 'Baloo Bhai', cursive;
 }
 
 .blogPostTitle {
-  font-family: 'Muli', sans-serif;
+  font-family: 'Marker-Felt-Regular', sans-serif;
   font-size: 55px;
+}
+
+.blogPostSubtitle {
+  font-family: 'Marker-Felt-Regular', sans-serif;
+  font-size: 35px;
 }
 
 .blogPostWhenAndWho {

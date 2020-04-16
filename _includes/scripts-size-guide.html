@@ -3,9 +3,13 @@
         $('[name=title_format]').click(function()  {
             var radioButtonValueClicked = $(this).val();
             
-            console.log("Clicked " + radioButtonValueClicked);
+            var measurementLabel = "You're measuring using " + radioButtonValueClicked;
 
-            $('[name=doc-title]').val('Clicked ' + radioButtonValueClicked);
+            console.log(measurementLabel);
+
+            $('[name=doc-title]').val(measurementLabel);
+
+            $("#measurementLabel").text(measurementLabel);
         });
     });
 </script>

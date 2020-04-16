@@ -28,6 +28,10 @@
                     console.log("Contains In inside VALUE");
                     strippedCurrentMeasurementValue = currentMeasurementValue.replace("In","");
                 }
+                else
+                {
+                    strippedCurrentMeasurementValue = currentMeasurementValue;
+                }
 
                 var strippedCurrentMeasurementText;
 
@@ -35,6 +39,10 @@
                 {
                     console.log("Contains In inside TEXT");
                     strippedCurrentMeasurementText = currentMeasurementText.replace("In","");
+                }
+                else
+                {
+                    strippedCurrentMeasurementText = currentMeasurementText;
                 }
 
                 var newMeasurementValue = strippedCurrentMeasurementValue + " " + chosenMeasurementValue;

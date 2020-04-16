@@ -1,15 +1,13 @@
 <script type="text/javascript">
     $(document).ready(function(){
-        $('[name=title_format]').click(function()  {
+        $("[name=measurementTypeRadioButton]").click(function()  {
             var radioButtonValueClicked = $(this).val();
             
-            var measurementLabel = "You're measuring using " + radioButtonValueClicked;
+            var measurementTypeLabel = "You're measuring using " + radioButtonValueClicked;
 
-            console.log(measurementLabel);
+            console.log(measurementTypeLabel);
 
-            $('[name=doc-title]').val(measurementLabel);
-
-            $("#measurementLabel").text(measurementLabel);
+            $("#measurementTypeLabel").text(measurementTypeLabel);
         });
     });
 </script>

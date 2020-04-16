@@ -1,18 +1,18 @@
 ---
 title: Look and Paws Blog | Petwear Fashion Blog Posts
-layout: default
+layout: size-guide-layout
 ---
 
 <div class="row">
     <div class="col-md-6 col-12 mx-auto">
         <div class="form-check">
             <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="optradio" onclick="changeTheText(this.value);"> Centimetres (Cm)
+              <input type="radio" class="form-check-input" name="title_format"> Centimetres (Cm)
             </label>
           </div>
           <div class="form-check">
             <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="optradio" onclick="changeTheText(this.value);"> Inches (In)
+              <input type="radio" class="form-check-input" name="title_format"> Inches (In)
             </label>
           </div>
     </div>
@@ -37,11 +37,3 @@ layout: default
         <label id="doc-title" for="title"></label>
     </div>
 </div>
-
-<script type="text/javscript">
-    $(document).ready(function(){
-        $('[name=title_format]').click(function()  {
-            $('[name=doc-title]').val('Title changed to '+$(this).val());
-        });
-    });
-</script>

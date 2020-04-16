@@ -1,0 +1,47 @@
+---
+title: Look and Paws Blog | Petwear Fashion Blog Posts
+layout: default
+---
+
+<div class="row">
+    <div class="col-md-6 col-12 mx-auto">
+        <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optradio" onclick="changeTheText(this.value);"> Centimetres (Cm)
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optradio" onclick="changeTheText(this.value);"> Inches (In)
+            </label>
+          </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-12 mx-auto">
+        <div class="form-group">
+            <label for="sel1">Choose Size:</label>
+            <select class="form-control">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+          </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-12 mx-auto">
+        <label id="doc-title" for="title"></label>
+    </div>
+</div>
+
+<script type="text/javscript">
+    $(document).ready(function(){
+        $('[name=title_format]').click(function()  {
+            $('[name=doc-title]').val('Title changed to '+$(this).val());
+        });
+    });
+</script>

@@ -1,9 +1,9 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $("[name=measurementTypeRadioButton]").click(function()  {
-            var measurementValue = $(this).val();
+            var chosenMeasurementValue = $(this).val();
             
-            var measurementTypeLabel = "You're measuring using " + measurementValue;
+            var measurementTypeLabel = "You're measuring using " + chosenMeasurementValue;
 
             $("#measurementTypeLabel").text(measurementTypeLabel);
 
@@ -12,10 +12,17 @@
             for (i = 0; i < measurementSelectList.length; i++) 
             { 
                 console.log(i);
+
+                var currentMeasurementValue = measurementSelectList.options[i].value;
+                var currentMeasurementText = measurementSelectList.options[i].text;
+                
+                var newMeasurementValue = currentMeasurementValue + " " + chosenMeasurementValue;
+                var newMeasurementText = currentMeasurementText + " " + chosenMeasurementValue;
+
+                measurementSelectList.options[i].value = newMeasurementValue;
+                measurementSelectList.options[i].text = newMeasurementText;
             }
             
-            measurementSelectList.options[0].value = measurementValue;
-            measurementSelectList.options[0].text = measurementValue;
             $("#measurementValueSelectList").change();
         });
     });

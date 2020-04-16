@@ -15,8 +15,6 @@
 
             for (i = 0; i < measurementSelectList.length; i++) 
             { 
-                console.log(i);
-
                 var currentMeasurementValue = measurementSelectList.options[i].value;
                 var currentMeasurementText = measurementSelectList.options[i].text;
 
@@ -57,6 +55,8 @@
             console.log("Chosen " + currentlySelectedMeasurementValue);
 
             var correctProductSize = determineCorrectProductSizeToPurchase(currentlySelectedMeasurementValue);
+
+            $("#correctProductSizeLabel").text(correctProductSize);
         });
 
         function determineCorrectProductSizeToPurchase(inputMeasurementValue)
@@ -79,12 +79,20 @@
 
         function lookupCentimetresMeasurement(inputCentimetreValue)
         {
-
+            if (inputCentimetreValue >= 1 && inputCentimetreValue <= 3) {
+                return "Size Small";
+            }
+            else if (inputCentimetreValue >= 4 && inputCentimetreValue <= 6) {
+                return "Size Medium";
+            }
+            else if (inputCentimetreValue >= 7 && inputCentimetreValue <= 9) {
+                return "Size Large";
+            }
         }
 
         function lookupInchesMeasurement(inputInchesValue)
         {
-
+            return "We don't like inches in the Uk...";
         }
     });
 </script>

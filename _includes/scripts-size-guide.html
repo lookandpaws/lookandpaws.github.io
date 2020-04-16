@@ -1,13 +1,24 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $("[name=measurementTypeRadioButton]").click(function()  {
-            var radioButtonValueClicked = $(this).val();
+            var measurementValue = $(this).val();
             
-            var measurementTypeLabel = "You're measuring using " + radioButtonValueClicked;
+            var measurementTypeLabel = "You're measuring using " + measurementValue;
 
             console.log(measurementTypeLabel);
 
             $("#measurementTypeLabel").text(measurementTypeLabel);
+            // $("[name=measurementValue]").val(measurementValue);
+
+            // var test = ("#measurementValueSelectList");
+            // console.log(test);
+
+            var measurementSelectList = document.getElementById("measurementValueSelectList");
+            console.log(measurementSelectList);
+            
+            measurementSelectList.options[0].value = measurementValue;
+            measurementSelectList.options[0].text = measurementValue;
+            $("#measurementValueSelectList").change();
         });
     });
 </script>

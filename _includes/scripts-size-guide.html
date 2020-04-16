@@ -21,20 +21,24 @@
                 // currentMeasurementValue.replace("Cm","");
                 // currentMeasurementText.replace("Cm","");
 
+                var strippedCurrentMeasurementValue;
+
                 if(currentMeasurementValue.indexOf("In") !== -1)
                 {
                     console.log("Contains In inside VALUE");
-                    currentMeasurementValue.replace("In","");
+                    strippedCurrentMeasurementValue = currentMeasurementValue.replace("In","");
                 }
+
+                var strippedCurrentMeasurementText;
 
                 if(currentMeasurementText.indexOf("In") !== -1)
                 {
                     console.log("Contains In inside TEXT");
-                    currentMeasurementText.replace("In","");
+                    strippedCurrentMeasurementText = currentMeasurementText.replace("In","");
                 }
 
-                var newMeasurementValue = currentMeasurementValue + " " + chosenMeasurementValue;
-                var newMeasurementText = currentMeasurementText + " " + chosenMeasurementValue;
+                var newMeasurementValue = strippedCurrentMeasurementValue + " " + chosenMeasurementValue;
+                var newMeasurementText = strippedCurrentMeasurementText + " " + chosenMeasurementValue;
 
                 measurementSelectList.options[i].value = newMeasurementValue;
                 measurementSelectList.options[i].text = newMeasurementText;

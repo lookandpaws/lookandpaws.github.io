@@ -5,16 +5,14 @@
             
             var measurementTypeLabel = "You're measuring using " + measurementValue;
 
-            console.log(measurementTypeLabel);
-
             $("#measurementTypeLabel").text(measurementTypeLabel);
-            // $("[name=measurementValue]").val(measurementValue);
-
-            // var test = ("#measurementValueSelectList");
-            // console.log(test);
 
             var measurementSelectList = document.getElementById("measurementValueSelectList");
-            console.log(measurementSelectList);
+            
+            for (i = 0; i < measurementSelectList.length; i++) 
+            { 
+                console.log(i);
+            }
             
             measurementSelectList.options[0].value = measurementValue;
             measurementSelectList.options[0].text = measurementValue;

@@ -2,7 +2,10 @@
     $(document).ready(function(){
         $('[name=title_format]').click(function()  {
             console.log("Click.....");
-            $('[name=doc-title]').val('Title changed to '+$(this).val());
+
+            var radioButtonValueClicked = +$(this).val();
+
+            $('[name=doc-title]').val('Clicked ' + radioButtonValueClicked);
         });
     });
 </script>

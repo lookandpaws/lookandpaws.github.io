@@ -3,11 +3,21 @@ title: Look and Paws Blog | Petwear Fashion Blog Posts
 layout: size-guide-layout
 ---
 
+<div id="title">
+  <label class="" id="title-text" for="title">Hello World</label>
+  <input type="text" name="doc-title" value="" id="title" autocomplete="off">
+</div>
+<div id="title-select">
+  <input type="radio" name="title_format" class="title-format" id="title-format-0" value="0" checked="checked"><label for="title-format-0">Title 1</label><br>
+  <input type="radio" name="title_format" class="title-format" id="title-format-1" value="1"> <label for="title-format-1">Title 2</label><br>
+  <input type="radio" name="title_format" class="title-format" id="title-format-2" value="2"> <label for="title-format-2">Title 3</label>
+</div>
+
 <div class="row">
     <div class="col-md-6 col-12 mx-auto">
         <div class="form-check">
             <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="title_format"> Centimetres (Cm)
+              <input type="radio" class="form-check-input" name="title_format" checked="checked"> Centimetres (Cm)
             </label>
           </div>
           <div class="form-check">
@@ -34,6 +44,6 @@ layout: size-guide-layout
 
 <div class="row">
     <div class="col-md-6 col-12 mx-auto">
-        <label id="doc-title" for="title"></label>
+        <label id="doc-title">Text here...</label>
     </div>
 </div>

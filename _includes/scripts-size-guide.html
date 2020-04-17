@@ -1,13 +1,17 @@
 <script type="text/javascript">
     $(document).ready(function(){
 
-        const centimetres = "Cm";
-        const inches = "In";
+        const centimetresKeyword = "Cm";
+        const inchesKeyword = "In";
+        const sizeXtraSmall = "Size Xtra Small";
+        const sizeSmall = "Size Small";
+        const sizeMedium = "Size Medium";
+        const sizeLarge = "Size Large";
 
         $("[name=measurementTypeRadioButton]").click(function()  {
             var chosenMeasurementValue = $(this).val();
             
-            var measurementTypeLabel = "You're measuring using " + chosenMeasurementValue;
+            const measurementTypeLabel = "You're measuring using " + chosenMeasurementValue;
 
             $("#measurementTypeLabel").text(measurementTypeLabel);
 
@@ -18,23 +22,23 @@
                 var currentMeasurementValue = measurementSelectList.options[i].value;
                 var currentMeasurementText = measurementSelectList.options[i].text;
 
-                if(currentMeasurementValue.indexOf(inches) !== -1)
+                if(currentMeasurementValue.indexOf(inchesKeyword) !== -1)
                 {
                     console.log("Contains In inside VALUE");
                     currentMeasurementValue = currentMeasurementValue.replace(/In/g,"");
                 }
-                else if(currentMeasurementValue.indexOf(centimetres) !== -1)
+                else if(currentMeasurementValue.indexOf(centimetresKeyword) !== -1)
                 {
                     console.log("Contains Cm inside VALUE");
                     currentMeasurementValue = currentMeasurementValue.replace(/Cm/g,"");
                 }
 
-                if(currentMeasurementText.indexOf(inches) !== -1)
+                if(currentMeasurementText.indexOf(inchesKeyword) !== -1)
                 {
                     console.log("Contains In inside TEXT");
                     currentMeasurementText = currentMeasurementText.replace(/In/g,"");
                 }
-                else if(currentMeasurementText.indexOf(centimetres) !== -1)
+                else if(currentMeasurementText.indexOf(centimetresKeyword) !== -1)
                 {
                     console.log("Contains Cm inside TEXT");
                     currentMeasurementText = currentMeasurementText.replace(/Cm/g,"");
@@ -61,14 +65,14 @@
 
         function determineCorrectProductSizeToPurchase(inputMeasurementValue)
         {
-            if(inputMeasurementValue.indexOf(inches) !== -1)
+            if(inputMeasurementValue.indexOf(inchesKeyword) !== -1)
             {
                 console.log("Contains In");
                 var strippedInputMeasurementValueInches = inputMeasurementValue.replace(/In/g,"");
 
                 return lookupInchesMeasurement(strippedInputMeasurementValueInches);
             }
-            else if(inputMeasurementValue.indexOf(centimetres) !== -1)
+            else if(inputMeasurementValue.indexOf(centimetresKeyword) !== -1)
             {
                 console.log("Contains Cm");
                 var strippedInputMeasurementValueCentimetres = inputMeasurementValue.replace(/Cm/g,"");
@@ -80,19 +84,33 @@
         function lookupCentimetresMeasurement(inputCentimetreValue)
         {
             if (inputCentimetreValue >= 1 && inputCentimetreValue <= 3) {
-                return "Size Small";
+                return sizeXtraSmall;
             }
             else if (inputCentimetreValue >= 4 && inputCentimetreValue <= 6) {
-                return "Size Medium";
+                return sizeSmall;
             }
             else if (inputCentimetreValue >= 7 && inputCentimetreValue <= 9) {
-                return "Size Large";
+                return sizeMedium;
+            }
+            else if (inputCentimetreValue >= 10 && inputCentimetreValue <= 12) {
+                return sizeLarge;
             }
         }
 
         function lookupInchesMeasurement(inputInchesValue)
         {
-            return "We don't like inches in the Uk...";
+            if (inputInchesValue >= 1 && inputInchesValue <= 3) {
+                return sizeXtraSmall;
+            }
+            else if (inputInchesValue >= 4 && inputInchesValue <= 6) {
+                return sizeSmall;
+            }
+            else if (inputInchesValue >= 7 && inputInchesValue <= 9) {
+                return sizeMedium;
+            }
+            else if (inputInchesValue >= 10 && inputInchesValue <= 12) {
+                return sizeLarge;
+            }
         }
     });
 </script>

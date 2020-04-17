@@ -19,6 +19,10 @@ body {
   margin-bottom: 60px; /* Margin bottom by footer height */
 }
 
+.homePageBody {
+  background-color: #fac0ec;
+}
+
 .navbarLink {
 color: #000000 !important;
 font-family: 'Baloo Bhai', cursive;

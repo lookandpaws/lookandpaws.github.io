@@ -3,6 +3,11 @@
   src: url(/assets/fonts/Marker-Felt-Regular.ttf);
 }
 
+@font-face {
+  font-family: Royal-Muffin;
+  src: url(/assets/fonts/Royal-Muffin.ttf);
+}
+
 html {
   height: 100%;
   position: relative;
@@ -112,7 +117,7 @@ padding: 10px !important;
 .brand-slogan-desktop {
   font-size:60px;
   color: #ffffff;
-  font-family: 'Baloo Bhai', cursive;
+  font-family: 'Marker-Felt-Regular', cursive;
 }
 
 .brand-title-mobile {
@@ -124,7 +129,7 @@ padding: 10px !important;
 .brand-slogan-mobile {
   font-size:40px;
   color: #ffffff;
-  font-family: 'Baloo Bhai', cursive;
+  font-family: 'Marker-Felt-Regular', cursive;
 }
 
 .shipping {

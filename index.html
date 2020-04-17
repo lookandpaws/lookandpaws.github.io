@@ -20,13 +20,11 @@ layout: default-layout
 <div class="background-image-mobile d-block d-md-none">
   <main role="main" class="container">
     <div class="row">
-      <div class="col-10 text-center" style="background-color: yellow;">
+      <div class="col-md-6 col-9">
         <p class="brand-slogan-mobile mx-auto text-center">{{ site.sloganPrefix }} <br/> {{ site.sloganSuffix }}</p>
-      </div>  
-      <div class="col-10 text-center" style="background-color: red;">
-        <p class="countdownTimerMobile text-center" style="background-color: green;">Launching in... 
+        <p class="countdownTimerMobile mx-auto">Launching in... 
           <br/>
-          <span id="countdownTimerMobile" class="countdownTimerMobile"></span>
+          <span id="countdownTimerMobile" class="countdownTimerMobile mx-auto"></span>
         </p>
         {% include social-media-buttons.html %}
       </div>  

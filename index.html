@@ -9,7 +9,7 @@ layout: default-layout
   <main role="main" class="container">
     <div class="row">
       <div class="col-md-6 col-10">
-        <h1 class="brand-slogan-desktop mx-auto text-center">{{ site.slogan }}</h1>
+        <h1 class="brand-slogan-desktop mx-auto text-center">{{ site.sloganPrefix }} <br/> {{ site.sloganSuffix }}</h1>
         <p id="countdownTimerDesktop" class="countdownTimerDesktop mx-auto">Launching in... </p>
         {% include social-media-buttons.html %}
       </div>  
@@ -21,7 +21,7 @@ layout: default-layout
   <main role="main" class="container">
     <div class="row">
       <div class="col-md-6 col-10">
-        <p class="brand-slogan-mobile mx-auto text-center">{{ site.slogan }}</p>
+        <p class="brand-slogan-mobile mx-auto text-center">{{ site.sloganPrefix }} <br/> {{ site.sloganSuffix }}</p>
         <p id="countdownTimerMobile" class="countdownTimerMobile mx-auto">Launching in... </p>
         {% include social-media-buttons.html %}
       </div>  

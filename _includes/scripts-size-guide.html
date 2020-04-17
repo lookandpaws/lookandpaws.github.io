@@ -3,6 +3,8 @@
 
         const centimetresKeyword = "Cm";
         const inchesKeyword = "In";
+        const centimetresRegex = new RegExp(centimetresKeyword);
+        const inchesRegex = new RegExp(inchesKeyword);
         const sizeXtraSmall = "Size Xtra Small";
         const sizeSmall = "Size Small";
         const sizeMedium = "Size Medium";
@@ -51,14 +53,14 @@
             if(inputMeasurementValue.indexOf(centimetresKeyword) !== -1)
             {
                 // console.log("Contains Cm");
-                var strippedInputMeasurementValueCentimetres = inputMeasurementValue.replace(/Cm/g,"");
+                var strippedInputMeasurementValueCentimetres = inputMeasurementValue.replace(centimetresRegex,"");
 
                 return [strippedInputMeasurementValueCentimetres, centimetresKeyword];
             }
             else if(inputMeasurementValue.indexOf(inchesKeyword) !== -1)
             {
                 // console.log("Contains In");
-                var strippedInputMeasurementValueInches = inputMeasurementValue.replace(/In/g,"");
+                var strippedInputMeasurementValueInches = inputMeasurementValue.replace(inchesRegex,"");
 
                 return [strippedInputMeasurementValueInches, inchesKeyword];
             }

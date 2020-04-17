@@ -22,30 +22,13 @@
                 var currentMeasurementValue = measurementSelectList.options[i].value;
                 var currentMeasurementText = measurementSelectList.options[i].text;
 
-                if(currentMeasurementValue.indexOf(inchesKeyword) !== -1)
-                {
-                    console.log("Contains In inside VALUE");
-                    currentMeasurementValue = currentMeasurementValue.replace(/In/g,"");
-                }
-                else if(currentMeasurementValue.indexOf(centimetresKeyword) !== -1)
-                {
-                    console.log("Contains Cm inside VALUE");
-                    currentMeasurementValue = currentMeasurementValue.replace(/Cm/g,"");
-                }
+                var strippedMeasurementResultsForValue = stripInputMeasurementValue(currentMeasurementValue);
+                const strippedInputMeasurementValue = strippedMeasurementResultsForValue[0];
+                var strippedMeasurementResultsForText = stripInputMeasurementValue(currentMeasurementValue);
+                const strippedInputMeasurementText = strippedMeasurementResultsForText[0];
 
-                if(currentMeasurementText.indexOf(inchesKeyword) !== -1)
-                {
-                    console.log("Contains In inside TEXT");
-                    currentMeasurementText = currentMeasurementText.replace(/In/g,"");
-                }
-                else if(currentMeasurementText.indexOf(centimetresKeyword) !== -1)
-                {
-                    console.log("Contains Cm inside TEXT");
-                    currentMeasurementText = currentMeasurementText.replace(/Cm/g,"");
-                }
-
-                var newMeasurementValue = currentMeasurementValue + " " + chosenMeasurementValue;
-                var newMeasurementText = currentMeasurementText + " " + chosenMeasurementValue;
+                var newMeasurementValue = strippedInputMeasurementValue + " " + chosenMeasurementValue;
+                var newMeasurementText = strippedInputMeasurementText + " " + chosenMeasurementValue;
 
                 measurementSelectList.options[i].value = newMeasurementValue;
                 measurementSelectList.options[i].text = newMeasurementText;
@@ -56,7 +39,7 @@
         $('#measurementValueSelectList').change(function() {
             var currentlySelectedMeasurementValue = $('#measurementValueSelectList option:selected').val();
 
-            console.log("Chosen " + currentlySelectedMeasurementValue);
+            // console.log("Chosen " + currentlySelectedMeasurementValue);
 
             var correctProductSize = determineCorrectProductSizeToPurchase(currentlySelectedMeasurementValue);
 
@@ -67,14 +50,14 @@
         {
             if(inputMeasurementValue.indexOf(centimetresKeyword) !== -1)
             {
-                console.log("Contains Cm");
+                // console.log("Contains Cm");
                 var strippedInputMeasurementValueCentimetres = inputMeasurementValue.replace(/Cm/g,"");
 
                 return [strippedInputMeasurementValueCentimetres, centimetresKeyword];
             }
             else if(inputMeasurementValue.indexOf(inchesKeyword) !== -1)
             {
-                console.log("Contains In");
+                // console.log("Contains In");
                 var strippedInputMeasurementValueInches = inputMeasurementValue.replace(/In/g,"");
 
                 return [strippedInputMeasurementValueInches, inchesKeyword];

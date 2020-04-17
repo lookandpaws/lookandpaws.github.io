@@ -23,8 +23,12 @@ body {
 color: #000000 !important;
 font-family: 'Baloo Bhai', cursive;
 border:1px solid #f5f5f5;
+background-color: #f5f5f5;
 border-radius: 5px;
-padding: 10px !important;
+padding-left: 10px !important;
+padding-right: 10px !important;
+padding-top: 3px !important;
+padding-bottom: 3px !important;
 }
 
 .navbarStyle {

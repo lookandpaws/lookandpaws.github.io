@@ -28,7 +28,7 @@ blogPostedDateTwo: March 26th, 2020
 blogAuthoredByTwo: Look and Paws
 blogLandscapeImageTwo: /images/Blog-2/1_Look_and_Paws_Blog_Keeping_your_pet_calm_During_quarantine_anxiety.jpg
 blogUrlTwo: /blog/keeping-your-pet-calm-during-quarantine
-blogMetaKeywordTagsTwo:
+blogMetaKeywordTagsTwo: look and paws blog, lap blog, quarantine, coronavirus, lockdown, pandemic, calm pet, calm dog, calming your dog, living with dogs, living with pets, dog fashion, pet owners
 
 plugins:
   - jekyll-environment-variables

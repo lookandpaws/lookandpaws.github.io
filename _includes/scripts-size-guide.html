@@ -63,21 +63,37 @@
             $("#correctProductSizeLabel").text(correctProductSize);
         });
 
-        function determineCorrectProductSizeToPurchase(inputMeasurementValue)
+        function stripInputMeasurementValue(inputMeasurementValue)
         {
             if(inputMeasurementValue.indexOf(inchesKeyword) !== -1)
             {
                 console.log("Contains In");
                 var strippedInputMeasurementValueInches = inputMeasurementValue.replace(/In/g,"");
 
-                return lookupInchesMeasurement(strippedInputMeasurementValueInches);
+                return [strippedInputMeasurementValueInches, inchesKeyword];
             }
             else if(inputMeasurementValue.indexOf(centimetresKeyword) !== -1)
             {
                 console.log("Contains Cm");
                 var strippedInputMeasurementValueCentimetres = inputMeasurementValue.replace(/Cm/g,"");
 
-                return lookupCentimetresMeasurement(strippedInputMeasurementValueCentimetres);
+                return [strippedInputMeasurementValueCentimetres, centimetresKeyword];
+            }
+        }
+
+        function determineCorrectProductSizeToPurchase(inputMeasurementValue)
+        {
+            var strippedMeasurementResults = stripInputMeasurementValue(inputMeasurementValue);
+            const strippedInputMeasurementValue = strippedMeasurementResults[0];
+            const measurementValueType = strippedMeasurementResults[1];
+
+            if(measurementValueType == inchesKeyword)
+            {
+                return lookupInchesMeasurement(strippedInputMeasurementValue);
+            }
+            else if(measurementValueType == centimetresKeyword)
+            {
+                return lookupCentimetresMeasurement(strippedInputMeasurementValue);
             }
         }
 

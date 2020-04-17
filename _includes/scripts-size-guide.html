@@ -45,6 +45,8 @@
             var correctProductSize = determineCorrectProductSizeToPurchase(currentlySelectedMeasurementValue);
 
             $("#correctProductSizeLabel").text(correctProductSize);
+
+            showProductSizeResults();
         });
 
         function stripInputMeasurementValue(inputMeasurementValue)
@@ -111,6 +113,11 @@
             else if (inputInchesValue >= 10 && inputInchesValue <= 12) {
                 return sizeLarge;
             }
+        }
+
+        function showProductSizeResults()
+        {
+            $("#productSizeResults").show();
         }
     });
 </script>

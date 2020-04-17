@@ -22,7 +22,10 @@ layout: default-layout
     <div class="row">
       <div class="col-md-6 col-9">
         <p class="brand-slogan-mobile mx-auto text-center">{{ site.sloganPrefix }} <br/> {{ site.sloganSuffix }}</p>
-        <p id="countdownTimerMobile" class="countdownTimerMobile mx-auto">Launching in... </p>
+        <p class="countdownTimerMobile mx-auto">Launching in... 
+          <br/>
+          <span id="countdownTimerMobile" class="countdownTimerMobile mx-auto"></span>
+        </p>
         {% include social-media-buttons.html %}
       </div>  
     </div>

@@ -94,24 +94,40 @@
 
         function generateMeasurementSelectList(lowestMeasurement, highestMeasurement, measurementType)
         {
+            const measurementIncreaseByQuarter = 0.25;
+            const measurementIncreaseByHalf = 0.5;
+            const measurementIncreaseByThreeQuarters = 0.75;
+
             var measurementValueSelectList = document.getElementById("measurementValueSelectList");
 
             for (i = lowestMeasurement; i <= highestMeasurement; i++) 
             { 
-                var selectListOption = createSelectListOption(i, measurementType);
+                const currentIterationMeasurementValue = i;
 
-                measurementValueSelectList.appendChild(selectListOption);
+                var selectListOptionOne = createSelectListOption(
+                    currentIterationMeasurementValue, 
+                    measurementType);
+                measurementValueSelectList.appendChild(selectListOptionOne);
+
+                var additionalInputMeasurementValueTwo = currentIterationMeasurementValue + measurementIncreaseByHalf;
+                var selectListOptionTwo = createSelectListOption(
+                    additionalInputMeasurementValueTwo, 
+                    measurementType);
+                measurementValueSelectList.appendChild(selectListOptionTwo);
 
                 if(measurementType.indexOf(inchesKeyword) !== -1)
                 {
-                    var currentIterationMeasurementValue = i;
-                    var halfInchIncreasedInputMeasurementValue = currentIterationMeasurementValue + 0.5;
-
-                    var additionalSelectListOption = createSelectListOption(
-                        halfInchIncreasedInputMeasurementValue, 
+                    var additionalInputMeasurementValueThree = currentIterationMeasurementValue + measurementIncreaseByQuarter;
+                    var selectListOptionThree = createSelectListOption(
+                        additionalInputMeasurementValueThree, 
                         measurementType);
+                    measurementValueSelectList.appendChild(selectListOptionThree);
 
-                    measurementValueSelectList.appendChild(additionalSelectListOption);
+                    var additionalInputMeasurementValueFour = currentIterationMeasurementValue + measurementIncreaseByThreeQuarters;
+                    var selectListOptionFour = createSelectListOption(
+                        additionalInputMeasurementValueFour, 
+                        measurementType);
+                    measurementValueSelectList.appendChild(selectListOptionFour);
                 }
             }
         }

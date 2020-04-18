@@ -142,21 +142,38 @@
 
         function lookupCentimetresMeasurement(inputCentimetreValue)
         {
+            var sizeResults = new Array();
+
             if (inputCentimetreValue >= sizeXtraSmallCentimetresFirstHole && 
                 inputCentimetreValue <= sizeXtraSmallCentimetresLastHole) {
-                return sizeXtraSmall;
+                    sizeResults.push(sizeXtraSmall);
             }
-            else if (inputCentimetreValue >= sizeSmallCentimetresFirstHole && 
+
+            if (inputCentimetreValue >= sizeSmallCentimetresFirstHole && 
                     inputCentimetreValue <= sizeSmallCentimetresLastHole) {
-                return sizeSmall;
+                        sizeResults.push(sizeSmall);
             }
-            else if (inputCentimetreValue >= sizeMediumCentimetresFirstHole && 
+            
+            if (inputCentimetreValue >= sizeMediumCentimetresFirstHole && 
                     inputCentimetreValue <= sizeMediumCentimetresLastHole) {
-                return sizeMedium;
+                        sizeResults.push(sizeMedium);
             }
-            else if (inputCentimetreValue >= sizeLargeCentimetresFirstHole 
+            
+            if (inputCentimetreValue >= sizeLargeCentimetresFirstHole 
                     && inputCentimetreValue <= sizeLargeCentimetresLastHole) {
-                return sizeLarge;
+                        sizeResults.push(sizeLarge);
+            }
+            
+            if(sizeResults.length > 0)
+            {
+                if(sizeResults.length == 1)
+                {
+                    return sizeResults[0];
+                }
+                else if(sizeResults.length >= 2)
+                {
+                    
+                }
             }
             else
             {

@@ -22,6 +22,8 @@
         const sizeSmall = "Size Small";
         const sizeMedium = "Size Medium";
         const sizeLarge = "Size Large";
+        const measurementTypeMessagePrefix = "You're measuring using ";
+        const recommendedProductSizeMessagePrefix = "We recommended you purchase ";
         const errorMessage = "Sorry, we could not determine your size.";
 
         window.onload = generateMeasurementSelectList(
@@ -39,7 +41,7 @@
 
         function changeMeasurementTypeAfterRadioButtonClick(chosenMeasurementValue)
         {
-            const measurementTypeLabel = "You're measuring using " + chosenMeasurementValue;
+            const measurementTypeLabel = measurementTypeMessagePrefix + chosenMeasurementValue;
 
             $("#measurementTypeLabel").text(measurementTypeLabel);
 
@@ -81,9 +83,11 @@
 
             var correctProductSize = determineCorrectProductSizeToPurchase(currentlySelectedMeasurementValue);
 
-            console.log(correctProductSize);
+            var correctProductSizeMessage = recommendedProductSizeMessagePrefix + correctProductSize;
 
-            $("#correctProductSizeLabel").text(correctProductSize);
+            console.log(correctProductSizeMessage);
+
+            $("#correctProductSizeLabel").text(correctProductSizeMessage);
 
             showProductSizeResults();
         }

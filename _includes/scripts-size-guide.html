@@ -202,16 +202,22 @@
 
             if (inputCentimetreValue >= sizeSmallCentimetresFirstHole && 
                     inputCentimetreValue <= sizeSmallCentimetresLastHole) {
+                        // Empty the array, so we always have the largest size only.
+                        sizeResults = [];
                         sizeResults.push(sizeSmall);
             }
             
             if (inputCentimetreValue >= sizeMediumCentimetresFirstHole && 
                     inputCentimetreValue <= sizeMediumCentimetresLastHole) {
+                        // Empty the array, so we always have the largest size only.
+                        sizeResults = [];
                         sizeResults.push(sizeMedium);
             }
             
             if (inputCentimetreValue >= sizeLargeCentimetresFirstHole 
                     && inputCentimetreValue <= sizeLargeCentimetresLastHole) {
+                        // Empty the array, so we always have the largest size only.
+                        sizeResults = [];
                         sizeResults.push(sizeLarge);
             }
             

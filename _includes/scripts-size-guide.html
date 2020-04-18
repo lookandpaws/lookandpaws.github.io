@@ -10,10 +10,13 @@
         const centimetresRegex = new RegExp(centimetresKeyword);
         const inchesRegex = new RegExp(inchesKeyword);
         const centimetresToInchesConversionAmount = 2.54;
+        const sizeXtraSmallCentimetresFirstHole = 17;
+        const sizeXtraSmallCentimetresLastHole = 27;
         const sizeXtraSmall = "Size Xtra Small";
         const sizeSmall = "Size Small";
         const sizeMedium = "Size Medium";
         const sizeLarge = "Size Large";
+        const errorMessage = "Sorry, we could not determine your size.";
 
         window.onload = generateMeasurementSelectList(
             lowestMeasurementCentimetres, 
@@ -23,6 +26,11 @@
         $("[name=measurementTypeRadioButton]").click(function()  {
             var chosenMeasurementValue = $(this).val();
             
+            changeMeasurementTypeAfterRadioButtonClick(chosenMeasurementValue);
+        });
+
+        function changeMeasurementTypeAfterRadioButtonClick(chosenMeasurementValue)
+        {
             const measurementTypeLabel = "You're measuring using " + chosenMeasurementValue;
 
             $("#measurementTypeLabel").text(measurementTypeLabel);
@@ -45,11 +53,16 @@
                 measurementValueSelectList.options[i].value = newMeasurementValue;
                 measurementValueSelectList.options[i].text = newMeasurementText;
             }
-        });
+        }
 
         $('#measurementValueSelectList').change(function() {
             var currentlySelectedMeasurementValue = $('#measurementValueSelectList option:selected').val();
 
+            getProductSizeAfterMeasurementValueSelected(currentlySelectedMeasurementValue);
+        });
+
+        function getProductSizeAfterMeasurementValueSelected(currentlySelectedMeasurementValue)
+        {
             // console.log("Chosen " + currentlySelectedMeasurementValue);
 
             var correctProductSize = determineCorrectProductSizeToPurchase(currentlySelectedMeasurementValue);
@@ -57,7 +70,7 @@
             $("#correctProductSizeLabel").text(correctProductSize);
 
             showProductSizeResults();
-        });
+        }
 
         function generateMeasurementSelectList(lowestMeasurement, highestMeasurement, measurementType)
         {
@@ -123,7 +136,8 @@
 
         function lookupCentimetresMeasurement(inputCentimetreValue)
         {
-            if (inputCentimetreValue >= 1 && inputCentimetreValue <= 3) {
+            if (inputCentimetreValue >= sizeXtraSmallCentimetresFirstHole && 
+                inputCentimetreValue <= sizeXtraSmallCentimetresLastHole) {
                 return sizeXtraSmall;
             }
             else if (inputCentimetreValue >= 4 && inputCentimetreValue <= 6) {
@@ -134,6 +148,10 @@
             }
             else if (inputCentimetreValue >= 10 && inputCentimetreValue <= 12) {
                 return sizeLarge;
+            }
+            else
+            {
+                return errorMessage;
             }
         }
 

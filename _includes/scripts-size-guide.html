@@ -22,7 +22,6 @@
         const sizeSmall = "Size Small";
         const sizeMedium = "Size Medium";
         const sizeLarge = "Size Large";
-        const measurementTypeMessagePrefix = "You're measuring using ";
         const recommendedProductSizeMessagePrefix = "We recommended you purchase ";
         const errorMessage = "Sorry, we could not determine your size.";
 
@@ -41,10 +40,6 @@
 
         function changeMeasurementTypeAfterRadioButtonClick(chosenMeasurementValue)
         {
-            const measurementTypeLabel = measurementTypeMessagePrefix + chosenMeasurementValue;
-
-            $("#measurementTypeLabel").text(measurementTypeLabel);
-
             removeAllSelectListOptions(document.getElementById("measurementValueSelectList"));
 
             if(chosenMeasurementValue.indexOf(centimetresKeyword) !== -1)

@@ -14,8 +14,8 @@
         const sizeXtraSmallCentimetresLastHole = 27;
         const sizeSmallCentimetresFirstHole = 23;
         const sizeSmallCentimetresLastHole = 33;
-        const sizeMediumCentimetresFirstHole = 27;
-        const sizeMediumCentimetresLastHole = 39;
+        const sizeMediumCentimetresFirstHole = 29;
+        const sizeMediumCentimetresLastHole = 41;
         const sizeLargeCentimetresFirstHole = 37;
         const sizeLargeCentimetresLastHole = 49;
         const sizeXtraSmall = "Size Xtra Small";
@@ -41,27 +41,25 @@
 
             $("#measurementTypeLabel").text(measurementTypeLabel);
 
-            var measurementValueSelectList = document.getElementById("measurementValueSelectList");
+            removeAllSelectListOptions(document.getElementById("measurementValueSelectList"));
 
-            for (var i = 0; i < measurementValueSelectList.length; i++) 
-            { 
-                var currentMeasurementValue = measurementValueSelectList.options[i].value;
-                var currentMeasurementText = measurementValueSelectList.options[i].text;
-
-                var strippedMeasurementResultsForValue = stripInputMeasurementValue(currentMeasurementValue);
-                const strippedInputMeasurementValue = strippedMeasurementResultsForValue[0];
-                var strippedMeasurementResultsForText = stripInputMeasurementValue(currentMeasurementValue);
-                const strippedInputMeasurementText = strippedMeasurementResultsForText[0];
-
-                var newMeasurementValue = strippedInputMeasurementValue + " " + chosenMeasurementValue;
-                var newMeasurementText = strippedInputMeasurementText + " " + chosenMeasurementValue;
-
-                measurementValueSelectList.options[i].value = newMeasurementValue;
-                measurementValueSelectList.options[i].text = newMeasurementText;
+            if(chosenMeasurementValue.indexOf(centimetresKeyword) !== -1)
+            {
+                generateMeasurementSelectList(
+                    lowestMeasurementCentimetres, 
+                    highestMeasurementCentimetres, 
+                    centimetresKeyword);
+            }
+            else if(chosenMeasurementValue.indexOf(inchesKeyword) !== -1)
+            {
+                generateMeasurementSelectList(
+                    lowestMeasurementInches, 
+                    highestMeasurementInches, 
+                    inchesKeyword);
             }
         }
 
-        function removeAllSelecListOptions(measurementSelectList) {
+        function removeAllSelectListOptions(measurementSelectList) {
             var measurementSelectListLength = measurementSelectList.options.length - 1;
             
             for(var i = measurementSelectListLength; i >= 0; i--) {

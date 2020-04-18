@@ -80,19 +80,21 @@
             }
             else if(measurementValueType == inchesKeyword)
             {
-                return lookupInchesMeasurement(strippedInputMeasurementValue);
-            }
-        }
+                var convertedInchesMeasurementToCentimetres = convertFromInchesToCentimetres(strippedInputMeasurementValue);
 
-        function convertFromCentimetresToInches(inputCentimetresValue)
-        {
-            return inputCentimetresValue / centimetresToInchesConversionAmount;
+                return lookupCentimetresMeasurement(convertedInchesMeasurementToCentimetres);
+            }
         }
 
         function convertFromInchesToCentimetres(inputInchesValue)
         {
             return inputInchesValue * centimetresToInchesConversionAmount;
         }
+
+        // function convertFromCentimetresToInches(inputCentimetresValue)
+        // {
+        //     return inputCentimetresValue / centimetresToInchesConversionAmount;
+        // }
 
         function lookupCentimetresMeasurement(inputCentimetreValue)
         {
@@ -110,21 +112,21 @@
             }
         }
 
-        function lookupInchesMeasurement(inputInchesValue)
-        {
-            if (inputInchesValue >= 1 && inputInchesValue <= 3) {
-                return sizeXtraSmall;
-            }
-            else if (inputInchesValue >= 4 && inputInchesValue <= 6) {
-                return sizeSmall;
-            }
-            else if (inputInchesValue >= 7 && inputInchesValue <= 9) {
-                return sizeMedium;
-            }
-            else if (inputInchesValue >= 10 && inputInchesValue <= 12) {
-                return sizeLarge;
-            }
-        }
+        // function lookupInchesMeasurement(inputInchesValue)
+        // {
+        //     if (inputInchesValue >= 1 && inputInchesValue <= 3) {
+        //         return sizeXtraSmall;
+        //     }
+        //     else if (inputInchesValue >= 4 && inputInchesValue <= 6) {
+        //         return sizeSmall;
+        //     }
+        //     else if (inputInchesValue >= 7 && inputInchesValue <= 9) {
+        //         return sizeMedium;
+        //     }
+        //     else if (inputInchesValue >= 10 && inputInchesValue <= 12) {
+        //         return sizeLarge;
+        //     }
+        // }
 
         function showProductSizeResults()
         {

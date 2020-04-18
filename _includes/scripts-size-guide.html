@@ -33,6 +33,8 @@
             var chosenMeasurementValue = $(this).val();
             
             changeMeasurementTypeAfterRadioButtonClick(chosenMeasurementValue);
+
+            hideProductSizeResults();
         });
 
         function changeMeasurementTypeAfterRadioButtonClick(chosenMeasurementValue)
@@ -100,7 +102,7 @@
                 {
                     var currentIterationMeasurementValue = i;
                     var halfInchIncreasedInputMeasurementValue = currentIterationMeasurementValue + 0.5;
-                    
+
                     var additionalSelectListOption = createSelectListOption(
                         halfInchIncreasedInputMeasurementValue, 
                         measurementType);
@@ -233,6 +235,11 @@
         function showProductSizeResults()
         {
             $("#productSizeResults").show();
+        }
+
+        function hideProductSizeResults()
+        {
+            $("#productSizeResults").hide();
         }
     });
 </script>

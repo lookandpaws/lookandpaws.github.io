@@ -92,14 +92,33 @@
 
             for (i = lowestMeasurement; i <= highestMeasurement; i++) 
             { 
-                const generatedMeasurementValue = i + " " + measurementType;
+                var selectListOption = createSelectListOption(i, measurementType);
 
-                var option = document.createElement("option");
-                option.value = generatedMeasurementValue;
-                option.text = generatedMeasurementValue;
+                measurementValueSelectList.appendChild(selectListOption);
 
-                measurementValueSelectList.appendChild(option);
+                if(measurementType.indexOf(inchesKeyword) !== -1)
+                {
+                    var currentIterationMeasurementValue = i;
+                    var halfInchIncreasedInputMeasurementValue = currentIterationMeasurementValue + 0.5;
+                    
+                    var additionalSelectListOption = createSelectListOption(
+                        halfInchIncreasedInputMeasurementValue, 
+                        measurementType);
+
+                    measurementValueSelectList.appendChild(additionalSelectListOption);
+                }
             }
+        }
+
+        function createSelectListOption(inputMeasurementValue, measurementType)
+        {
+            const generatedMeasurementValue = inputMeasurementValue + " " + measurementType;
+            
+            var selectListOption = document.createElement("option");
+            selectListOption.value = generatedMeasurementValue;
+            selectListOption.text = generatedMeasurementValue;
+
+            return selectListOption
         }
 
         function stripInputMeasurementValue(inputMeasurementValue)

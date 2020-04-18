@@ -73,6 +73,8 @@
 
             var correctProductSize = determineCorrectProductSizeToPurchase(currentlySelectedMeasurementValue);
 
+            console.log(correctProductSize);
+
             $("#correctProductSizeLabel").text(correctProductSize);
 
             showProductSizeResults();
@@ -168,32 +170,15 @@
             {
                 if(sizeResults.length == 1)
                 {
-                    console.log("1 result");
+                    // console.log("1 result");
 
                     return sizeResults[0];
                 }
                 else if(sizeResults.length >= 2)
                 {
-                    console.log("2 or more results");
-
-                    // var resultMessageArray = new Array();
-
-                    // for (i = 0; i <= sizeResults.length; i++) 
-                    // { 
-                    //     if(i > 0)
-                    //     {
-                    //         resultMessageArray.push(" and ");
-                    //     }
-                    //     else
-                    //     {
-                    //         resultMessageArray.push(sizeResults[i]);
-                    //     }
-                    // }
+                    // console.log("2 or more results");
 
                     var sizeResultMessage = sizeResults.join(" and ");
-
-                    // var sizeResultMessage = resultMessageArray.toString();
-                    console.log(sizeResultMessage);
 
                     return sizeResultMessage;
                 }

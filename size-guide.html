@@ -5,9 +5,20 @@ layout: size-guide-layout
 
 <div class="row">
   <div class="col-11 mx-auto">
+
     <div class="row">
       <div class="col-md-5 col-12 mx-auto mt-5">
-          <h4>Which measurement type are you using:</h4>
+          <h4>Choose the product you are measuring:</h4>
+          <div class="form-group">
+              <select class="form-control" id="productSelectList">
+              </select>
+            </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-5 col-12 mx-auto mt-5">
+          <h4>Choose your measurement type:</h4>
           <div class="form-check">
               <label class="form-check-label">
                 <input type="radio" class="form-check-input" name="measurementTypeRadioButton" value="Centimetres" checked="checked"> Centimetres (Cm)
@@ -19,23 +30,24 @@ layout: size-guide-layout
               </label>
             </div>
       </div>
-  </div>
+    </div>
   
-  <div class="row">
-      <div class="col-md-5 col-12 mx-auto mt-5">
-          <h4>Select the measurement of your pets neck:</h4>
-          <div class="form-group">
-              <select class="form-control" id="measurementValueSelectList">
-              </select>
-            </div>
-      </div>
-  </div>
+    <div class="row">
+        <div class="col-md-5 col-12 mx-auto mt-5">
+            <h4>Select the measurement of your pets neck:</h4>
+            <div class="form-group">
+                <select class="form-control" id="measurementValueSelectList">
+                </select>
+              </div>
+        </div>
+    </div>
   
-  <div class="row" id="productSizeResults" style="display:none;">
-      <div class="col-md-5 col-12 mx-auto mt-5">
-        <h4>Your results:</h4>
-        <label id="correctProductSizeLabel"></label>
-      </div>
-  </div>
+    <div class="row" id="productSizeResults" style="display:none;">
+        <div class="col-md-5 col-12 mx-auto mt-5">
+          <h4>Your results:</h4>
+          <label id="correctProductSizeLabel"></label>
+        </div>
+    </div>
+
   </div>
 </div>

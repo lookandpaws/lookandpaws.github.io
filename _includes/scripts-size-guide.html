@@ -146,13 +146,16 @@
                 inputCentimetreValue <= sizeXtraSmallCentimetresLastHole) {
                 return sizeXtraSmall;
             }
-            else if (inputCentimetreValue >= 4 && inputCentimetreValue <= 6) {
+            else if (inputCentimetreValue >= sizeSmallCentimetresFirstHole && 
+                    inputCentimetreValue <= sizeSmallCentimetresLastHole) {
                 return sizeSmall;
             }
-            else if (inputCentimetreValue >= 7 && inputCentimetreValue <= 9) {
+            else if (inputCentimetreValue >= sizeMediumCentimetresFirstHole && 
+                    inputCentimetreValue <= sizeMediumCentimetresLastHole) {
                 return sizeMedium;
             }
-            else if (inputCentimetreValue >= 10 && inputCentimetreValue <= 12) {
+            else if (inputCentimetreValue >= sizeLargeCentimetresFirstHole 
+                    && inputCentimetreValue <= sizeLargeCentimetresLastHole) {
                 return sizeLarge;
             }
             else

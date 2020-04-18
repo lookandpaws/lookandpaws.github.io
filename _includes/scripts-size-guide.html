@@ -176,26 +176,26 @@
                 {
                     console.log("2 or more results");
 
-                    var resultMessage;
+                    // var resultMessageArray = new Array();
 
-                    for (i = 0; i <= sizeResults.length; i++) 
-                    { 
-                        if(i == 0)
-                        {
-                            resultMessage = sizeResults[i];
-                            console.log(resultMessage);
-                        }
-                        else
-                        {
-                            resultMessage += " and ";
-                            console.log(resultMessage);
-                            resultMessage += sizeResults[i];
-                            console.log(resultMessage);
-                        }
-                    }
+                    // for (i = 0; i <= sizeResults.length; i++) 
+                    // { 
+                    //     if(i > 0)
+                    //     {
+                    //         resultMessageArray.push(" and ");
+                    //     }
+                    //     else
+                    //     {
+                    //         resultMessageArray.push(sizeResults[i]);
+                    //     }
+                    // }
 
-                    console.log(resultMessage);
-                    return resultMessage;
+                    var sizeResultMessage = sizeResults.join(" and ");
+
+                    // var sizeResultMessage = resultMessageArray.toString();
+                    console.log(sizeResultMessage);
+
+                    return sizeResultMessage;
                 }
             }
             else

@@ -5,6 +5,7 @@
         const inchesKeyword = "Inches";
         const centimetresRegex = new RegExp(centimetresKeyword);
         const inchesRegex = new RegExp(inchesKeyword);
+        const centimetresToInchesConversionAmount = 2.54;
         const sizeXtraSmall = "Size Xtra Small";
         const sizeSmall = "Size Small";
         const sizeMedium = "Size Medium";
@@ -81,6 +82,16 @@
             {
                 return lookupInchesMeasurement(strippedInputMeasurementValue);
             }
+        }
+
+        function convertFromCentimetresToInches(inputCentimetresValue)
+        {
+            return inputCentimetresValue / centimetresToInchesConversionAmount;
+        }
+
+        function convertFromInchesToCentimetres(inputInchesValue)
+        {
+            return inputInchesValue * centimetresToInchesConversionAmount;
         }
 
         function lookupCentimetresMeasurement(inputCentimetreValue)

@@ -168,11 +168,28 @@
             {
                 if(sizeResults.length == 1)
                 {
+                    console.log("1 result");
+
                     return sizeResults[0];
                 }
                 else if(sizeResults.length >= 2)
                 {
-                    
+                    console.log("2 or more results");
+
+                    var resultMessage;
+
+                    for (i = 0; i <= sizeResults.length; i++) 
+                    { 
+                        if(i == 0)
+                        {
+                            resultMessage += sizeResults[i];
+                        }
+                        else
+                        {
+                            resultMessage += " and ";
+                            resultMessage += sizeResults[i];
+                        }
+                    }
                 }
             }
             else

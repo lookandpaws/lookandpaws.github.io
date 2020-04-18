@@ -1,6 +1,7 @@
 <script type="text/javascript">
     $(document).ready(function(){
 
+        const productArray = new Array("Biothane Collar");
         const lowestMeasurementCentimetres = 17;
         const highestMeasurementCentimetres = 49;
         const lowestMeasurementInches = 7;
@@ -26,9 +27,92 @@
         const errorMessage = "Sorry, we could not determine your size.";
 
         window.onload = generateMeasurementSelectList(
-            lowestMeasurementCentimetres, 
-            highestMeasurementCentimetres, 
-            centimetresKeyword);
+                lowestMeasurementCentimetres, 
+                highestMeasurementCentimetres, 
+                centimetresKeyword);
+        
+
+        function setupSizeGuidePage()
+        {
+            generateProductSelectList();
+
+            generateMeasurementSelectList(
+                lowestMeasurementCentimetres, 
+                highestMeasurementCentimetres, 
+                centimetresKeyword);
+        }
+
+        function generateProductSelectList()
+        {
+            var productSelectList = document.getElementById("productSelectList");
+
+            for (var i = 0; i <= productArray.length; i++) 
+            { 
+                var selectListOption = document.createElement("option");
+                selectListOption.value = generatedMeasurementValue;
+                selectListOption.text = generatedMeasurementValue;
+
+                productSelectList.appendChild(selectListOption);
+            }            
+        }
+
+        function generateMeasurementSelectList(lowestMeasurement, highestMeasurement, measurementType)
+        {
+            const measurementIncreaseByQuarter = 0.25;
+            const measurementIncreaseByHalf = 0.5;
+            const measurementIncreaseByThreeQuarters = 0.75;
+
+            var measurementValueSelectList = document.getElementById("measurementValueSelectList");
+
+            for (var i = lowestMeasurement; i <= highestMeasurement; i++) 
+            { 
+                const currentMeasurementValue = i;
+                var currentMeasurementValueIncreasedByQuarter = currentMeasurementValue + measurementIncreaseByQuarter;
+                var currentMeasurementValueIncreasedByHalf = currentMeasurementValue + measurementIncreaseByHalf;
+                var currentMeasurementValueIncreasedByThreeQuarters = currentMeasurementValue + measurementIncreaseByThreeQuarters;
+
+                measurementValueSelectList.appendChild(
+                    createSelectListOption(
+                        currentMeasurementValue, 
+                        measurementType));
+
+                if(measurementType.indexOf(centimetresKeyword) !== -1)
+                {
+                    measurementValueSelectList.appendChild(
+                    createSelectListOption(
+                        currentMeasurementValueIncreasedByHalf, 
+                        measurementType));
+                }
+                else if(measurementType.indexOf(inchesKeyword) !== -1)
+                {
+                    measurementValueSelectList.appendChild(
+                    createSelectListOption(
+                        currentMeasurementValueIncreasedByQuarter, 
+                        measurementType));
+
+                    measurementValueSelectList.appendChild(
+                        createSelectListOption(
+                            currentMeasurementValueIncreasedByHalf, 
+                            measurementType));
+
+                    measurementValueSelectList.appendChild(
+                        createSelectListOption(
+                            currentMeasurementValueIncreasedByThreeQuarters, 
+                            measurementType));
+                }
+            }
+        }
+
+        function createSelectListOption(inputMeasurementValue, measurementType)
+        {
+            const generatedMeasurementValue = inputMeasurementValue + " " + measurementType;
+            
+            var selectListOption = document.createElement("option");
+            selectListOption.value = generatedMeasurementValue;
+            selectListOption.text = generatedMeasurementValue;
+
+            return selectListOption
+        }
 
         $("[name=measurementTypeRadioButton]").click(function()  {
             var chosenMeasurementValue = $(this).val();
@@ -85,64 +169,6 @@
             $("#correctProductSizeLabel").text(correctProductSizeMessage);
 
             showProductSizeResults();
-        }
-
-        function generateMeasurementSelectList(lowestMeasurement, highestMeasurement, measurementType)
-        {
-            const measurementIncreaseByQuarter = 0.25;
-            const measurementIncreaseByHalf = 0.5;
-            const measurementIncreaseByThreeQuarters = 0.75;
-
-            var measurementValueSelectList = document.getElementById("measurementValueSelectList");
-
-            for (i = lowestMeasurement; i <= highestMeasurement; i++) 
-            { 
-                const currentMeasurementValue = i;
-                var currentMeasurementValueIncreasedByQuarter = currentMeasurementValue + measurementIncreaseByQuarter;
-                var currentMeasurementValueIncreasedByHalf = currentMeasurementValue + measurementIncreaseByHalf;
-                var currentMeasurementValueIncreasedByThreeQuarters = currentMeasurementValue + measurementIncreaseByThreeQuarters;
-
-                measurementValueSelectList.appendChild(
-                    createSelectListOption(
-                        currentMeasurementValue, 
-                        measurementType));
-
-                if(measurementType.indexOf(centimetresKeyword) !== -1)
-                {
-                    measurementValueSelectList.appendChild(
-                    createSelectListOption(
-                        currentMeasurementValueIncreasedByHalf, 
-                        measurementType));
-                }
-                else if(measurementType.indexOf(inchesKeyword) !== -1)
-                {
-                    measurementValueSelectList.appendChild(
-                    createSelectListOption(
-                        currentMeasurementValueIncreasedByQuarter, 
-                        measurementType));
-
-                    measurementValueSelectList.appendChild(
-                        createSelectListOption(
-                            currentMeasurementValueIncreasedByHalf, 
-                            measurementType));
-
-                    measurementValueSelectList.appendChild(
-                        createSelectListOption(
-                            currentMeasurementValueIncreasedByThreeQuarters, 
-                            measurementType));
-                }
-            }
-        }
-
-        function createSelectListOption(inputMeasurementValue, measurementType)
-        {
-            const generatedMeasurementValue = inputMeasurementValue + " " + measurementType;
-            
-            var selectListOption = document.createElement("option");
-            selectListOption.value = generatedMeasurementValue;
-            selectListOption.text = generatedMeasurementValue;
-
-            return selectListOption
         }
 
         function stripInputMeasurementValue(inputMeasurementValue)

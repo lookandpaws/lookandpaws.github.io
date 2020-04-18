@@ -43,7 +43,7 @@
 
             var measurementValueSelectList = document.getElementById("measurementValueSelectList");
 
-            for (i = 0; i < measurementValueSelectList.length; i++) 
+            for (var i = 0; i < measurementValueSelectList.length; i++) 
             { 
                 var currentMeasurementValue = measurementValueSelectList.options[i].value;
                 var currentMeasurementText = measurementValueSelectList.options[i].text;
@@ -58,6 +58,14 @@
 
                 measurementValueSelectList.options[i].value = newMeasurementValue;
                 measurementValueSelectList.options[i].text = newMeasurementText;
+            }
+        }
+
+        function removeAllSelecListOptions(measurementSelectList) {
+            var measurementSelectListLength = measurementSelectList.options.length - 1;
+            
+            for(var i = measurementSelectListLength; i >= 0; i--) {
+                measurementSelectList.remove(i);
             }
         }
 

@@ -182,12 +182,15 @@
                     { 
                         if(i == 0)
                         {
-                            resultMessage += sizeResults[i];
+                            resultMessage = sizeResults[i];
+                            console.log(resultMessage);
                         }
                         else
                         {
                             resultMessage += " and ";
+                            console.log(resultMessage);
                             resultMessage += sizeResults[i];
+                            console.log(resultMessage);
                         }
                     }
 

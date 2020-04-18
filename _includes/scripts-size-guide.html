@@ -15,6 +15,11 @@
         const sizeMedium = "Size Medium";
         const sizeLarge = "Size Large";
 
+        window.onload = generateMeasurementSelectList(
+            lowestMeasurementCentimetres, 
+            highestMeasurementCentimetres, 
+            centimetresKeyword);
+
         $("[name=measurementTypeRadioButton]").click(function()  {
             var chosenMeasurementValue = $(this).val();
             
@@ -22,12 +27,12 @@
 
             $("#measurementTypeLabel").text(measurementTypeLabel);
 
-            var measurementSelectList = document.getElementById("measurementValueSelectList");
+            var measurementValueSelectList = document.getElementById("measurementValueSelectList");
 
-            for (i = 0; i < measurementSelectList.length; i++) 
+            for (i = 0; i < measurementValueSelectList.length; i++) 
             { 
-                var currentMeasurementValue = measurementSelectList.options[i].value;
-                var currentMeasurementText = measurementSelectList.options[i].text;
+                var currentMeasurementValue = measurementValueSelectList.options[i].value;
+                var currentMeasurementText = measurementValueSelectList.options[i].text;
 
                 var strippedMeasurementResultsForValue = stripInputMeasurementValue(currentMeasurementValue);
                 const strippedInputMeasurementValue = strippedMeasurementResultsForValue[0];
@@ -37,8 +42,8 @@
                 var newMeasurementValue = strippedInputMeasurementValue + " " + chosenMeasurementValue;
                 var newMeasurementText = strippedInputMeasurementText + " " + chosenMeasurementValue;
 
-                measurementSelectList.options[i].value = newMeasurementValue;
-                measurementSelectList.options[i].text = newMeasurementText;
+                measurementValueSelectList.options[i].value = newMeasurementValue;
+                measurementValueSelectList.options[i].text = newMeasurementText;
             }
         });
 
@@ -53,6 +58,22 @@
 
             showProductSizeResults();
         });
+
+        function generateMeasurementSelectList(lowestMeasurement, highestMeasurement, measurementType)
+        {
+            var measurementValueSelectList = document.getElementById("measurementValueSelectList");
+
+            for (i = lowestMeasurement; i <= highestMeasurement; i++) 
+            { 
+                const generatedMeasurementValue = i + " " + measurementType;
+
+                var option = document.createElement("option");
+                option.value = generatedMeasurementValue;
+                option.text = generatedMeasurementValue;
+
+                measurementValueSelectList.appendChild(option);
+            }
+        }
 
         function stripInputMeasurementValue(inputMeasurementValue)
         {

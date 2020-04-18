@@ -102,32 +102,39 @@
 
             for (i = lowestMeasurement; i <= highestMeasurement; i++) 
             { 
-                const currentIterationMeasurementValue = i;
+                const currentMeasurementValue = i;
+                var currentMeasurementValueIncreasedByQuarter = currentMeasurementValue + measurementIncreaseByQuarter;
+                var currentMeasurementValueIncreasedByHalf = currentMeasurementValue + measurementIncreaseByHalf;
+                var currentMeasurementValueIncreasedByThreeQuarters = currentMeasurementValue + measurementIncreaseByThreeQuarters;
 
-                var selectListOptionOne = createSelectListOption(
-                    currentIterationMeasurementValue, 
-                    measurementType);
-                measurementValueSelectList.appendChild(selectListOptionOne);
+                measurementValueSelectList.appendChild(
+                    createSelectListOption(
+                        currentMeasurementValue, 
+                        measurementType));
 
-                var additionalInputMeasurementValueTwo = currentIterationMeasurementValue + measurementIncreaseByHalf;
-                var selectListOptionTwo = createSelectListOption(
-                    additionalInputMeasurementValueTwo, 
-                    measurementType);
-                measurementValueSelectList.appendChild(selectListOptionTwo);
-
-                if(measurementType.indexOf(inchesKeyword) !== -1)
+                if(measurementType.indexOf(centimetresKeyword) !== -1)
                 {
-                    var additionalInputMeasurementValueThree = currentIterationMeasurementValue + measurementIncreaseByQuarter;
-                    var selectListOptionThree = createSelectListOption(
-                        additionalInputMeasurementValueThree, 
-                        measurementType);
-                    measurementValueSelectList.appendChild(selectListOptionThree);
+                    measurementValueSelectList.appendChild(
+                    createSelectListOption(
+                        currentMeasurementValueIncreasedByHalf, 
+                        measurementType));
+                }
+                else if(measurementType.indexOf(inchesKeyword) !== -1)
+                {
+                    measurementValueSelectList.appendChild(
+                    createSelectListOption(
+                        currentMeasurementValueIncreasedByQuarter, 
+                        measurementType));
 
-                    var additionalInputMeasurementValueFour = currentIterationMeasurementValue + measurementIncreaseByThreeQuarters;
-                    var selectListOptionFour = createSelectListOption(
-                        additionalInputMeasurementValueFour, 
-                        measurementType);
-                    measurementValueSelectList.appendChild(selectListOptionFour);
+                measurementValueSelectList.appendChild(
+                    createSelectListOption(
+                        currentMeasurementValueIncreasedByHalf, 
+                        measurementType));
+
+                measurementValueSelectList.appendChild(
+                    createSelectListOption(
+                        currentMeasurementValueIncreasedByThreeQuarters, 
+                        measurementType));
                 }
             }
         }

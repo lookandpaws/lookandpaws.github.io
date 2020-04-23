@@ -169,6 +169,10 @@ font-size: 18px;
 font-family: 'Baloo Bhai', cursive;
 }
 
+.countdownTimerSeconds {
+  color: #ffffff;
+}
+
 .socialMediaButton {
 font-family: 'Baloo Bhai', cursive;
 }

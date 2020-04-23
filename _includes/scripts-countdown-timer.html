@@ -12,10 +12,12 @@
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-      document.getElementById("countdownTimerDesktop").innerHTML = "Launching in... " + days + "d " + hours + "h "
-      + minutes + "m " + seconds + "s ";
-      document.getElementById("countdownTimerMobile").innerHTML = days + "d " + hours + "h "
-      + minutes + "m " + seconds + "s ";
+      document.getElementById("countdownTimerDesktop").innerHTML = "Launching in... " + days + "days " + hours + "h "
+      + minutes + "m ";
+      document.getElementById("countdownTimerDesktopSeconds").innerHTML = seconds + "s ";
+      document.getElementById("countdownTimerMobile").innerHTML = days + "days " + hours + "h "
+      + minutes + "m ";
+      document.getElementById("countdownTimerMobileSeconds").innerHTML = seconds + "s ";
     
       if (distance < 0) {
         clearInterval(x);

@@ -10,8 +10,10 @@ layout: default-layout
     <div class="row">
       <div class="col-md-6 col-10">
         <h1 class="brand-slogan-desktop mx-auto text-center">{{ site.sloganPrefix }} <br/> {{ site.sloganSuffix }}</h1>
-        <p id="countdownTimerDesktop" class="countdownTimerDesktop mx-auto">Launching in... </p>
-        <p id="countdownTimerDesktopSeconds" class="countdownTimerDesktop countdownTimerSeconds mx-auto"></p>
+        <p class="countdownTimerWrapper mx-auto">
+          <span id="countdownTimerDesktop" class="countdownTimerDesktop">Launching in... </span>
+          <span id="countdownTimerDesktopSeconds" class="countdownTimerDesktop countdownTimerSeconds"></span>
+        </p>
         {% include social-media-buttons.html %}
       </div>  
     </div>

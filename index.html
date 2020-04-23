@@ -11,6 +11,7 @@ layout: default-layout
       <div class="col-md-6 col-10">
         <h1 class="brand-slogan-desktop mx-auto text-center">{{ site.sloganPrefix }} <br/> {{ site.sloganSuffix }}</h1>
         <p id="countdownTimerDesktop" class="countdownTimerDesktop mx-auto">Launching in... </p>
+        <p id="countdownTimerDesktopSeconds" class="countdownTimerDesktop countdownTimerSeconds mx-auto"></p>
         {% include social-media-buttons.html %}
       </div>  
     </div>
@@ -25,6 +26,7 @@ layout: default-layout
         <p class="countdownTimerMobile mx-auto">Launching in... 
           <br/>
           <span id="countdownTimerMobile" class="countdownTimerMobile mx-auto"></span>
+          <span id="countdownTimerMobileSeconds" class="countdownTimerMobile countdownTimerSeconds mx-auto"></span>
         </p>
         {% include social-media-buttons.html %}
       </div>  

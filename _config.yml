@@ -5,7 +5,6 @@ sloganPrefix: Sassy petwear
 sloganSuffix: for bouji floofs
 
 logoLong: /images/look-and-paws-logo.png
-blogLogoLong: /images/look-and-paws-blog-logo.png
 
 rootDomainWebsiteUrl: /
 instagramUrl: https://instagram.com/lookandpawsofficial
@@ -14,22 +13,6 @@ pinterestUrl: https://www.pinterest.co.uk/lookandpaws
 linktreeUrl: https://linktr.ee/lookandpaws
 
 blogHomePageUrl: https://blog.lookandpaws.com
-
-blogTitleOne: How To Keep Your Pet Entertained During Lockdown
-blogDescriptionOne: Remaining indoors whilst the sun is beaming outside during lockdown, is becoming rather frustrating for both you and your pet. To help, we’ve put together a series of ways to keep both you and your four-legged friends both entertained and happily distracted during these difficult times.
-blogPostedDateOne: March 21st, 2020
-blogAuthoredByOne: Look and Paws
-blogLandscapeImageOne: /images/Blog-1/Look_and_Paws_Blog_How_To_Keep_Your_Pet_Entertained_During_Lockdown_1.jpg
-blogUrlOne: /blog/how-to-keep-pet-entertained-during-lockdown
-blogMetaKeywordTagsOne: look and paws blog, lap blog, coronavirus, lockdown, pandemic, entertain pet, entertain dog, living with dogs, living with pets, dog fashion, pet owners
-
-blogTitleTwo: Keeping Your Pet Calm During Quarantine
-blogDescriptionTwo: We all know that pets are super sensitive to human emotions, and during these stressful and anxious times it's likely having a bit of an impact on our fur babies! Your working from home can cause your pet to become more stressed and anxious. Fortunately, we’ve put together a series of steps you can follow, to ensure that things go as smoothly as possible for you and your floof during lockdown!
-blogPostedDateTwo: March 26th, 2020
-blogAuthoredByTwo: Look and Paws
-blogLandscapeImageTwo: /images/Blog-2/1_Look_and_Paws_Blog_Keeping_your_pet_calm_During_quarantine_anxiety.jpg
-blogUrlTwo: /blog/keeping-your-pet-calm-during-quarantine
-blogMetaKeywordTagsTwo: look and paws blog, lap blog, quarantine, coronavirus, lockdown, pandemic, calm pet, calm dog, calming your dog, living with dogs, living with pets, dog fashion, pet owners
 
 plugins:
   - jekyll-environment-variables

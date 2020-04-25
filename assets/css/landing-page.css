@@ -262,7 +262,16 @@ a:active {
   color: #000000;
 }
 
-.socialMediaHashtagWrapper {
+.socialMediaHashtagWrapperDesktop {
+  border-radius: 5px;
+  padding-top:6px;
+  padding-bottom:6px;
+  padding-left:1px;
+  padding-right:1px;
+  background-color: #000000;
+}
+
+.socialMediaHashtagWrapperMobile {
   border-radius: 5px;
   padding-top:1px;
   padding-bottom:1px;
@@ -271,14 +280,29 @@ a:active {
   background-color: #000000;
 }
 
+
 .socialMediaHashtagStatement {
   font-family: 'Baloo Bhai', cursive;
   color:#ffffff;
-  font-size:15px;
 }
 
 .socialMediaHashtag {
   font-family: 'Baloo Bhai', cursive;
   color:#fac0ec;
+}
+
+.socialMediaHashtagStatementDesktop {
+  font-size:15px;
+}
+
+.socialMediaHashtagDesktop {
   font-size:20px;
+}
+
+.socialMediaHashtagStatementMobile {
+  font-size:8px;
+}
+
+.socialMediaHashtagMobile {
+  font-size:12px;
 }

@@ -270,4 +270,10 @@ a:active {
 .socialMediaHashtag {
   color:#fac0ec;
   font-size:20px;
+  border-radius: 5px;
+  padding-top:1px;
+  padding-bottom:1px;
+  padding-left:20px;
+  padding-right:20px;
+  background-color: #000000;
 }

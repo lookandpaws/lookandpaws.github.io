@@ -262,7 +262,12 @@ a:active {
   color: #000000;
 }
 
-.socialMediaHashtag {
+.socialMediaHashtagStatement {
   font-family: 'Baloo Bhai', cursive;
   font-size:15px;
+}
+
+.socialMediaHashtag {
+  color:#fac0ec;
+  font-size:20px;
 }

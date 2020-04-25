@@ -261,3 +261,8 @@ a:hover {
 a:active {
   color: #000000;
 }
+
+.socialMediaHashtag {
+  font-family: 'Baloo Bhai', cursive;
+  font-size:15px;
+}

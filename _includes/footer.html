@@ -1,17 +1,31 @@
 <div class="d-none d-md-block">
     <div class="container-footer">
-        <a href="{{ site.rootDomainWebsiteUrl }}">
-            <span class="shipping float-left"><i class="fa fa-globe" aria-hidden="true"></i> Petwear shipped worldwide</span>
-            <span class="copyright float-right">© {{site.title}} {{site.time | date:'%Y'}}</span>
-        </a>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="{{ site.rootDomainWebsiteUrl }}">
+                    <span class="shipping float-left"><i class="fa fa-globe" aria-hidden="true"></i> Petwear shipped worldwide</span>
+                </a>
+            </div>
+            <div class="col-md-4">
+                {% include social-media-buttons.html %}
+            </div>
+            <div class="col-md-4">
+                <a href="{{ site.rootDomainWebsiteUrl }}">
+                    <span class="copyright float-right">© {{site.title}} {{site.time | date:'%Y'}}</span>
+                </a>
+            </div>
+        </div>
     </div>
 </div>
   
 <div class="d-block d-md-none">
     <div class="container-footer">
-        <a href="{{ site.rootDomainWebsiteUrl }}"></a>
+        <a href="{{ site.rootDomainWebsiteUrl }}">
             <span class="shipping footerShippingCopyrightMobile float-left"><i class="fa fa-globe" aria-hidden="true"></i>  Shipped worldwide</span>
+        </a>
+        <a href="{{ site.rootDomainWebsiteUrl }}">
             <span class="copyright footerShippingCopyrightMobile float-right">© {{site.title}} {{site.time | date:'%Y'}}</span>
         </a>
     </div>
 </div>
+  

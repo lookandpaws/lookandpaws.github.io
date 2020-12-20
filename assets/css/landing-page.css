@@ -306,3 +306,8 @@ a:active {
 .socialMediaHashtagMobile {
   font-size:12px;
 }
+
+.etsy-store-title {
+  font-family: 'Baloo Bhai'; 
+  text-align: center;
+}

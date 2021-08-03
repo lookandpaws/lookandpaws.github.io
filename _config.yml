@@ -1,0 +1,17 @@
+baseurl: ''
+permalink: pretty
+title: Look and Paws
+sloganPrefix: Sassy petwear
+sloganSuffix: for boujie floofs
+
+logoLong: /images/look-and-paws-logo.png
+
+rootDomainWebsiteUrl: /
+instagramUrl: https://instagram.com/lookandpawsofficial
+
+instagramHashtagUrl: https://www.instagram.com/explore/tags/lookandpaws/
+
+etsyStoreUrl: https://www.etsy.com/uk/shop/LookandPaws
+
+plugins:
+  - jekyll-environment-variables

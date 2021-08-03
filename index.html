@@ -1,0 +1,37 @@
+---
+title: Look and Paws | British Sassy Petwear Fashion Brand
+layout: default-layout
+---
+
+{% include navbar.html %}
+
+<div class="background-image-desktop d-none d-md-block">
+  <main role="main" class="container">
+    <div class="row">
+      <div class="col-md-6 col-10">
+        <h1 class="brand-slogan-desktop mx-auto text-center">{{ site.sloganPrefix }} <br/> {{ site.sloganSuffix }}</h1>
+        <p class="etsy-store-title mx-auto">
+          Visit our Etsy store or Instagram page!
+        </p>
+        {% include social-media-buttons.html %}
+      </div>  
+    </div>
+  </main>
+</div>
+
+<div class="background-image-mobile d-block d-md-none">
+  <main role="main" class="container">
+    <div class="row">
+      <div class="col-md-6 col-9">
+        <p class="brand-slogan-mobile mx-auto text-center">{{ site.sloganPrefix }} <br/> {{ site.sloganSuffix }}</p>
+        <p class="etsy-store-title mx-auto">
+          Visit our Etsy store or Instagram page!
+        </p>
+        {% include social-media-buttons.html %}
+      </div>  
+    </div>
+  </main>
+</div>
+
+{% include footer-home-page.html %}
+

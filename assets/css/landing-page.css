@@ -1,0 +1,313 @@
+@font-face {
+  font-family: Marker-Felt-Regular;
+  src: url(/assets/fonts/Marker-Felt-Regular.ttf);
+}
+
+@font-face {
+  font-family: Royal-Muffin;
+  src: url(/assets/fonts/Royal-Muffin.ttf);
+}
+
+html {
+  height: 100%;
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  height:100%;
+  margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
+.homePageBody {
+  background-color: #fac0ec;
+}
+
+.navbarLinkButton {
+color: #000000 !important;
+font-family: 'Baloo Bhai', cursive;
+border:2px solid #07d8ff;
+background-color: #f5f5f5;
+border-radius: 5px;
+padding-left: 10px !important;
+padding-right: 10px !important;
+padding-top: 3px !important;
+padding-bottom: 3px !important;
+}
+
+.navbarStyle {
+  background-color: #fac0ec;
+  /* background-color: #f5f5f5; */
+  /* background-color: #28d9fd; */
+}
+
+.footerHomePage {
+  position: absolute;
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+
+.background-image-desktop {
+  /* The image used */
+  background-image: url("/images/look-and-paws-landing-page.jpg");
+
+  /* Half height */
+  height: 55%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background-image-mobile {
+  /* The image used */
+  background-image: url("/images/look-and-paws-landing-page.jpg");
+
+  /* Half height */
+  height: 55%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.lookAndPawsLogoLongDesktop {
+  height: 140px;
+  width: 470px;
+  padding-bottom: 20px;
+}
+
+.lookAndPawsLogoLongMobile {
+  height: 85px;
+  width: 280px;
+  padding-bottom: 20px;
+}
+
+.centerAnImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.centerAnImageBlogHome {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.container {
+  width: auto;
+  padding-left: 15px;
+  padding-top: 40px;
+}
+
+.container-footer {
+  width: auto;
+  padding: 0 15px;
+}
+
+.brand-title-desktop {
+  font-size:70px;
+  color: #000000;
+  font-family: 'Baloo Bhai', cursive;
+}
+
+.brand-slogan-desktop {
+  font-size:80px;
+  color: #ffffff;
+  font-family: 'Marker-Felt-Regular', cursive;
+}
+
+.brand-title-mobile {
+  font-size:50px;
+  color: #000000;
+  font-family: 'Baloo Bhai', cursive;
+}
+
+.brand-slogan-mobile {
+  font-size:30px;
+  color: #ffffff;
+  font-family: 'Marker-Felt-Regular', cursive;
+}
+
+.shipping {
+  color: #000000;
+  font-family: 'Baloo Bhai', cursive;
+}
+
+.copyright {
+  color: #07d8ff;
+  font-family: 'Baloo Bhai', cursive;
+}
+
+.footerShippingCopyrightMobile {
+  font-size: 14px;
+}
+
+.countdownTimerWrapper {
+  text-align: center;
+}
+
+.countdownTimerDesktop {
+text-align: center;
+margin-top:30px;
+font-size: 20px;
+width: 370px;
+font-family: 'Baloo Bhai', cursive;
+}
+
+.countdownTimerMobile {
+text-align: center;
+margin-top:30px;
+font-size: 18px;
+font-family: 'Baloo Bhai', cursive;
+}
+
+.countdownTimerSeconds {
+  color: #ffffff;
+}
+
+.socialMediaButton {
+font-family: 'Baloo Bhai', cursive;
+}
+
+.blogButtonContainer{
+  margin-top:15px;
+}
+
+.homePageBlogButton {
+  font-family: 'Baloo Bhai', cursive;
+  margin-top: 15px;
+}
+
+.blogHomeTitle {
+  font-family: 'Marker-Felt-Regular', sans-serif;
+  font-size: 24px;
+}
+
+.blogHomeBlogPostTitle {
+  font-family: 'Marker-Felt-Regular', sans-serif;
+}
+
+.blogHomeBlogPostDescription {
+  font-family: 'Muli', sans-serif;
+}
+
+.blogHomeBlogPostWhenAndWho {
+  font-family: 'Muli', sans-serif;
+}
+
+.blogHomeBlogPostReadMoreButton {
+  font-family: 'Muli', sans-serif;
+}
+
+.blogPostTitle {
+  font-family: 'Marker-Felt-Regular', sans-serif;
+  font-size: 65px;
+}
+
+.blogPostSubtitle {
+  font-family: 'Marker-Felt-Regular', sans-serif;
+  font-size: 35px;
+}
+
+.blogPostWhenAndWho {
+  font-family: 'Muli', sans-serif;
+}
+
+.blogPostContent {
+  font-family: 'Muli', sans-serif;
+}
+
+.btn-primary{color:#000000;background-color:#fac0ec;border-color:#fac0ec}
+.btn-primary:hover{color:#fff;background-color:#f7c8ec;border-color:#f7c8ec}
+.btn-primary:focus,.btn-primary.focus{box-shadow:0 0 0 .2rem rgba(0,90,90,0.5)}
+.btn-primary.disabled,.btn-primary:disabled{color:#fff;background-color:#999999;border-color:#999999}
+.btn-primary:not(:disabled):not(.disabled):active,.btn-primary:not(:disabled):not(.disabled).active,.show>.btn-primary.dropdown-toggle{color:#fff;background-color:#fac0ec;border-color:#000}
+.btn-primary:not(:disabled):not(.disabled):active:focus,.btn-primary:not(:disabled):not(.disabled).active:focus,.show>.btn-primary.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(0,90,90,0.5)}
+
+.hrTagStyle {
+  border-width: 2px; 
+  width:200px; 
+  background-color:#fac0ec;
+}
+
+/* unvisited link */
+a:link {
+  color: #000000;
+}
+
+/* visited link */
+a:visited {
+  color: #000000;
+}
+
+/* mouse over link */
+a:hover {
+  color: #000000;
+}
+
+/* selected link */
+a:active {
+  color: #000000;
+}
+
+.socialMediaHashtagWrapperDesktop {
+  border-radius: 5px;
+  padding-top:6px;
+  padding-bottom:6px;
+  padding-left:1px;
+  padding-right:1px;
+  background-color: #000000;
+}
+
+.socialMediaHashtagWrapperMobile {
+  border-radius: 5px;
+  padding-top:1px;
+  padding-bottom:4px;
+  padding-left:1px;
+  padding-right:1px;
+  background-color: #000000;
+}
+
+
+.socialMediaHashtagStatement {
+  font-family: 'Baloo Bhai', cursive;
+  color:#ffffff;
+}
+
+.socialMediaHashtag {
+  font-family: 'Baloo Bhai', cursive;
+  color:#fac0ec;
+}
+
+.socialMediaHashtagStatementDesktop {
+  font-size:15px;
+}
+
+.socialMediaHashtagDesktop {
+  font-size:20px;
+}
+
+.socialMediaHashtagStatementMobile {
+  font-size:8px;
+}
+
+.socialMediaHashtagMobile {
+  font-size:12px;
+}
+
+.etsy-store-title {
+  font-family: 'Baloo Bhai'; 
+  text-align: center;
+}
